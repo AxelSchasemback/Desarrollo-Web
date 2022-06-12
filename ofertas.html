@@ -5,11 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link rel="shotcut icon" href="./icons/iconLogo.png">
-    <title>Productos</title>
+    <title>Ofertas</title>
 </head>
 
 <body>
@@ -51,13 +50,15 @@
                 <header class="header">
                     <section>
                         <div class="container-sec">
-                            <img class="sec-img" src="./img/edit-AMD-Intel.jpg" alt="fondoVs">
-                            <!-- Con Js hacemos un filter a las imagenes para traer los productos segun su categoria -->
-                            <!-- por ahora voy a aplicar productos.html -->
-                            <a href="./productos.html"><img class="section-intel" src="./img/intel-Simbolo.png"
-                                    alt="Intel"></a>
-                            <a href="./productos.html"><img class="section-amd" src="./img/AMD-Simbolo.png"
-                                    alt="Amd"></a>
+                            <div class="flex-absolute">
+                                <img class="sec-img" src="./img/edit-AMD-Intel.jpg" alt="fondoVs">
+                                <!-- Con Js hacemos un filter a las imagenes para traer los productos segun su categoria -->
+                                <!-- por ahora voy a aplicar productos.html -->
+                                <a href="./productos.html"><img class="section-intel" src="./img/intel-Simbolo.png"
+                                        alt="Intel"></a>
+                                <a href="./productos.html"><img class="section-amd" src="./img/AMD-Simbolo.png"
+                                        alt="Amd"></a>
+                            </div>
                         </div>
                     </section>
                 </header>
@@ -68,7 +69,7 @@
                         <tr class="row-fluid">
                             <!-- Table Header - Encabezado de Tablas -->
                             <th class="des-1">
-                                <h1>OFERTAS IMPERDIBLES</h1>
+                                <h1 class="title-card">OFERTAS IMPERDIBLES</h1>
                             </th>
                         </tr>
                         <tr class="gen-card">
@@ -77,7 +78,7 @@
                                 <div class="col-md-card">
                                     <img class="img-p" src="/img/Imagen de prueba.jpg" alt="prueba">
                                     <span class="stock">stock</span>
-                                    <img class="fav-start" src="./img/Estrella.png" alt="Fav">
+                                    <span class="fav-start fa fa-star"></span>
                                     <div>
                                         <p class="name-prod">nombre</p>
                                         <span class="price-prod">$9999</span>
@@ -89,7 +90,7 @@
                                 <div class="col-md-card">
                                     <img class="img-p" src="/img/Imagen de prueba.jpg" alt="prueba">
                                     <span class="stock">stock</span>
-                                    <img class="fav-start" src="./img/Estrella.png" alt="Fav">
+                                    <span class="fav-start fa fa-star"></span>
                                     <div>
                                         <p class="name-prod">nombre</p>
                                         <span class="price-prod">$9999</span>
@@ -101,7 +102,7 @@
                                 <div class="col-md-card">
                                     <img class="img-p" src="/img/Imagen de prueba.jpg" alt="prueba">
                                     <span class="stock">stock</span>
-                                    <img class="fav-start" src="./img/Estrella.png" alt="Fav">
+                                    <span class="fav-start fa fa-star"></span>
                                     <div>
                                         <p class="name-prod">nombre</p>
                                         <span class="price-prod">$9999</span>
@@ -113,7 +114,7 @@
                                 <div class="col-md-card">
                                     <img class="img-p" src="/img/Imagen de prueba.jpg" alt="prueba">
                                     <span class="stock">stock</span>
-                                    <img class="fav-start" src="./img/Estrella.png" alt="Fav">
+                                    <span class="fav-start fa fa-star"></span>
                                     <div>
                                         <p class="name-prod">nombre</p>
                                         <span class="price-prod">$9999</span>
@@ -128,7 +129,7 @@
                         <!-- Table Header - Encabezado de Tablas -->
                         <tr class="row-fluid">
                             <th class="des-2">
-                                <h1>pocos con Stock!</h1>
+                                <h1 class="title-card">pocos con Stock!</h1>
                             </th>
                         </tr>
                         <!-- ****** CARD DE LOS PRODUCTOS ******* -->
@@ -138,7 +139,7 @@
                                 <div class="col-md-card">
                                     <img class="img-p" src="/img/Imagen de prueba.jpg" alt="prueba">
                                     <span class="stock red">!stock</span>
-                                    <img class="fav-start" src="./img/Estrella.png" alt="Fav">
+                                    <span class="fav-start fa fa-star"></span>
                                     <div>
                                         <p class="name-prod">nombre</p>
                                         <span class="price-prod">$9999</span>
@@ -150,7 +151,7 @@
                                 <div class="col-md-card">
                                     <img class="img-p" src="/img/Imagen de prueba.jpg" alt="prueba">
                                     <span class="stock red">!stock</span>
-                                    <img class="fav-start" src="./img/Estrella.png" alt="Fav">
+                                    <span class="fav-start fa fa-star"></span>
                                     <div>
                                         <p class="name-prod">nombre</p>
                                         <span class="price-prod">$9999</span>
@@ -162,7 +163,7 @@
                                 <div class="col-md-card">
                                     <img class="img-p" src="/img/Imagen de prueba.jpg" alt="prueba">
                                     <span class="stock red">!stock</span>
-                                    <img class="fav-start" src="./img/Estrella.png" alt="Fav">
+                                    <span class="fav-start fa fa-star"></span>
                                     <div>
                                         <p class="name-prod">nombre</p>
                                         <span class="price-prod">$9999</span>
@@ -174,7 +175,7 @@
                                 <div class="col-md-card">
                                     <img class="img-p" src="/img/Imagen de prueba.jpg" alt="prueba">
                                     <span class="stock red">!stock</span>
-                                    <img class="fav-start" src="./img/Estrella.png" alt="Fav">
+                                    <span class="fav-start fa fa-star"></span>
                                     <div>
                                         <p class="name-prod">nombre</p>
                                         <span class="price-prod">$9999</span>
@@ -189,29 +190,41 @@
         </main>
         <footer>
             <ul class="ft-list">
-                <li class="list-social">
-                    <img src="./icons/facebook.png" alt="facebook">
-                    <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                <li>
+                    <label class="list-social">
+                        <a href="https://www.facebook.com" target="_blank">Facebook
+                        <img src="./icons/facebook.png" alt="facebook"></a>
+                    </label>
                 </li>
-                <li class="list-social">
-                    <img src="./icons/instagram.png" alt="instagram">
-                    <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                <li>
+                    <label class="list-social">
+                        <a href="https://www.instagram.com" target="_blank">Instagram
+                        <img src="./icons/instagram.png" alt="instagram"></a>
+                    </label>
                 </li>
-                <li class="list-social">
-                    <img src="./icons/youtubea.png" alt="youtube">
-                    <a href="https://www.youtube.com/"" target=" _blank">Youtube</a>
+                <li>
+                    <label class="list-social">
+                        <a href="https://www.youtube.com/"" target=" _blank">Youtube
+                        <img src="./icons/youtubea.png" alt="youtube"></a>
+                    </label>
                 </li>
-                <li class="list-social">
-                    <img src="./icons/twitter.png" alt="twitter">
-                    <a href="https://www.twitter.com" target="_blank">Twitter</a>
+                <li>
+                    <label class="list-social">
+                        <a href="https://www.twitter.com" target="_blank">Twitter
+                        <img src="./icons/twitter.png" alt="twitter"></a>
+                    </label>
                 </li>
-                <li class="list-social">
-                    <img src="./icons/icono hotmail.png" alt="twitter">
-                    <a href="https://www.outlook.com" target="_blank">Hotmail</a>
+                <li>
+                    <label class="list-social">
+                        <a href="https://www.outlook.com" target="_blank">Hotmail
+                        <img src="./icons/icono hotmail.png" alt="twitter"></a>
+                    </label>
                 </li>
-                <li class="list-social">
-                    <img src="./icons/llamda icon.png" alt="telefono">
-                    <a href="https://www.whatsapp.com" target="_blank">WhatsApp</a>
+                <li>
+                    <label class="list-social">
+                        <a href="https://www.whatsapp.com" target="_blank">WhatsApp
+                        <img src="./icons/llamda icon.png" alt="telefono"></a>
+                    </label>
                 </li>
             </ul>
         </footer>
