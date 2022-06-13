@@ -25,7 +25,7 @@ body {
     grid-area: nav;
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: #404040;
     border-bottom: 3px solid #252525;
     font-size: 32px;
