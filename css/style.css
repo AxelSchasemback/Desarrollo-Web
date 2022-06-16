@@ -11,7 +11,7 @@ body {
 }
 
 /* **********     NAV     ***************** */
-.container {
+.contenedor {
     display: grid;
     grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
     grid-template-areas:
@@ -243,9 +243,8 @@ main {
     flex-direction: row;
 }
 
-table tr {
-    display: flex;
-    justify-content: center;
+.title-h {
+    width: 46rem;
 }
 
 .title-card {
@@ -505,6 +504,58 @@ table tr {
 
 .span-form {
     padding-right: 20px;
+}
+
+/* ****** BT-carrito.html ***** */
+
+.nav {
+    background-image: linear-gradient(45deg, #070707, #404040);
+    width: 100%;
+    border-bottom: 3px solid #252525;
+    font-size: 32px;
+    height: 70px;
+}
+
+.navbar-nav {
+    transform: skew(340deg);
+}
+
+.botom-nav {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    padding: 6px 10px;
+    margin-right: 1rem;
+    background-color: #1F1F1F;
+    border: 2px outset #ff8800;
+}
+
+.botom-nav:hover {
+    transform: scale(1.1)
+}
+
+.search {
+    border-radius: 0;
+}
+
+.submit {
+    color: #fff;
+    border-radius: 0;
+    padding: 0;
+}
+
+.cart-h2 {
+    padding-top: 1rem;
+}
+
+.cart-img {
+    width: 23rem;
+    height: 8rem;
+    margin-right: 1rem;
+}
+
+.table-scale:hover {
+    transform: scale(1.05);
 }
 
 
