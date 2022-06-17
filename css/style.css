@@ -66,7 +66,7 @@ body {
     transform: scale(1.1)
 }
 
-.btn {
+.botn {
     margin-left: 20px;
     margin-top: 7px
 }
@@ -508,6 +508,10 @@ main {
 
 /* ****** BT-carrito.html ***** */
 
+.large {
+    height: 80rem;
+}
+
 .nav {
     background-image: linear-gradient(45deg, #070707, #404040);
     width: 100%;
@@ -545,7 +549,8 @@ main {
 }
 
 .cart-h2 {
-    padding-top: 1rem;
+    padding-top: 5rem;
+    margin-bottom: 3rem;
 }
 
 .cart-img {
@@ -554,10 +559,46 @@ main {
     margin-right: 1rem;
 }
 
-.table-scale:hover {
-    transform: scale(1.05);
+.table {
+    margin-bottom: 0;
 }
 
+.table-scale:hover {
+    transform: scale(1.03);
+    transition: .5s;
+}
+
+.resumen-buy {
+    width: 10rem;
+}
+
+.card-img-top {
+    height:14rem;
+    width: 11rem;
+}
+
+.card {
+    width: 11rem;
+    height: 23rem;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.producto-release {
+    display: inline-block;
+    margin-top: 3rem;
+}
+
+.total {
+    margin: 1rem;
+    padding-bottom: 5rem;
+}
+.ft {
+    padding-left: 0;
+    margin-bottom: 0;
+}
 
 /* ******** FOOOTER ******** */
 
@@ -850,6 +891,21 @@ footer {
     .form-reg div {
         padding-bottom: 3.5em;
     }
+
+
+/* ****** BT-carrito ***** */
+
+    .large {
+        height: 95rem;
+    }
+
+    .nav {
+        height: 15rem;
+    }
+
+    .navbar-nav {
+        transform: none;
+    }
 }
 
 @media (max-width: 425px) {
@@ -975,4 +1031,60 @@ footer {
         padding-right: 5px;
         width: 19em;
     }
+
+    /* ****** BT-carrito ****** */
+
+    .large {
+        height: 95rem;
+    }
+
+    .nav {
+        height: 15rem;
+    }
+
+    .navbar-nav {
+        transform: none;
+    }
+
+    .imgLogo {
+        width: 6em;
+        height: 6em;
+    }
+
+    .register {
+        width: 5.3em;
+        height: 5.3em;
+    }
+
+    .card-release-cont {
+        width: 100%;
+    }
+
+    .card {
+        width: 8rem;
+        height: 20rem
+    }
+
+    .card-img-top {
+        height: 11rem;
+        width: 8rem;
+    }
+}
+
+    @media (max-width: 320px) {
+
+        .imgLogo {
+            width: 3em;
+            height: 3em;
+        }
+    
+        .register {
+            width: 2.3em;
+            height: 2.3em;
+        }
+    
+        .card-img-top {
+            height: 9rem;
+            width: 6.5rem;
+        }
 }
