@@ -19,30 +19,30 @@
         <div class="collapse d-flex align-items-center" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link botom-nav" aria-current="page" href="#">Productos</a>
+                    <a class="nav-link botom-nav" aria-current="page" href="./productos.html">Productos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link botom-nav" aria-current="page" href="#">Nuestros Combos</a>
+                    <a class="nav-link botom-nav" aria-current="page" href="./combos.html">Nuestros Combos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link botom-nav" href="#">Nuestras Ofertas</a>
+                    <a class="nav-link botom-nav" href="./ofertas.html">Nuestras Ofertas</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle botom-nav" href="#" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle botom-nav" href="./miCuenta.html" id="navbarDropdown"
+                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Mi Cuenta
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item botom-nav" href="#">Facturas</a></li>
-                        <li><a class="dropdown-item botom-nav" href="#">Estado de Compra</a></li>
+                        <li><a class="dropdown-item botom-nav" href="./miCuenta.html">Facturas</a></li>
+                        <li><a class="dropdown-item botom-nav" href="./miCuenta.html">Estado de Compra</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item botom-nav" href="#">favoritos</a></li>
+                        <li><a class="dropdown-item botom-nav" href="./miCuenta.html">favoritos</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link botom-nav">Ayuda</a>
+                    <a class="nav-link botom-nav" href="./ayuda.html">Ayuda</a>
                 </li>
             </ul>
         </div>
@@ -54,13 +54,16 @@
             </form>
             <a href="./registro.html"><img class="register" src="./icons/icono de usuario.png"></a>
             <a href="./carrito.html"><img class="cart" src="./icons/carro-de-la-carretilla.png"></a>
-            <span class="cnt-cart"> 0 </span>
+            <span class="cnt-cart"> 3 </span>
         </div>
     </nav>
-    <div class="container fondo large">
+    <!-- container main -->
+    <main class="container fondo large">
         <h2 class="cart-h2 text-center">CARRITO DE COMPRAS</h2>
         <div class="table-responsive">
+            <!-- tabla y stilo de la tabla -->
             <table class="table table-dark table-striped-columns">
+                <!-- Cabezera de Tabla -->
                 <thead class="table-h">
                     <tr>
                         <th scope="col">#</th>
@@ -70,10 +73,12 @@
                         <th scope="col">SUBTOTAL</th>
                     </tr>
                 </thead>
+                <!-- Cuerpo de Tabla -->
                 <tbody>
                     <tr class="table-scale">
                         <th class="align-middle" scope="row">1</th>
                         <td>
+                            <!-- flexBox - col mas ancha - width 100% -->
                             <div class="col-sm-1 col-10 d-flex p-2 w-100">
                                 <img class="cart-img" src="./img/Imagen de prueba.jpg" alt="prueba">
                                 <div>
@@ -87,6 +92,7 @@
                                 </div>
                             </div>
                         </td>
+                        <!-- Tabla de Datos Centradas -->
                         <td class="text-center align-middle">$99999</td>
                         <td class="text-center align-middle">1 u</td>
                         <td class="text-center align-middle">$99999</td>
@@ -94,6 +100,7 @@
                     <tr class="table-scale">
                         <th class="align-middle" scope="row">2</th>
                         <td>
+                            <!-- flexBox - col mas ancha - width 100% -->
                             <div class="col-sm-1 col-10 d-flex p-2 w-100">
                                 <img class="cart-img" src="./img/Imagen de prueba.jpg" alt="prueba">
                                 <div>
@@ -107,6 +114,7 @@
                                 </div>
                             </div>
                         </td>
+                        <!-- Tabla de Datos Centradas -->
                         <td class="text-center align-middle">$99999</td>
                         <td class="text-center align-middle">1 u</td>
                         <td class="text-center align-middle">$99999</td>
@@ -114,6 +122,7 @@
                     <tr class="table-scale">
                         <th class="align-middle" scope="row">3</th>
                         <td>
+                            <!-- flexBox - col mas ancha - width 100% -->
                             <div class="col-sm-1 col-10 d-flex p-2 w-100">
                                 <img class="cart-img" src="./img/Imagen de prueba.jpg" alt="prueba">
                                 <div>
@@ -127,6 +136,7 @@
                                 </div>
                             </div>
                         </td>
+                        <!-- Tabla de Datos Centradas -->
                         <td class="text-center align-middle">$99999</td>
                         <td class="text-center align-middle">1 u</td>
                         <td class="text-center align-middle">$99999</td>
@@ -134,7 +144,10 @@
                 </tbody>
             </table>
         </div>
+        <!-- pequeña tabla con resumen de la compra -->
+        <!-- flexbox- flex-direccion-column - justify-content-space-between -->
         <div class="d-flex flex-column flex-lg-row justify-content-between">
+            <!-- tabla con flexbox y textos centrados -->
             <table class="table resumen-buy table-dark table-striped-columns text-center d-flex justify-content-center">
                 <tr>
                     <th class="text-center align-middle">#</th>
@@ -157,8 +170,10 @@
                     <td>Total: $99999</td>
                 </tr>
             </table>
+            <!-- card sacada de boostrap -->
             <div class="col-8 d-flex flex-column">
                 <h6 class="producto-release text-center"> Productos Relacionados</h6>
+                <!-- flexbox, resolucion media en adelante space-around -->
                 <div class="d-flex justify-content-md-around">
                     <div class="card bg-dark bg-gradient">
                         <img src="./img/Imagen de prueba.jpg" class="card-img-top" alt="prueba">
@@ -187,7 +202,8 @@
                 </div>
             </div>
         </div>
-    </div>
+    </main>
+    <!-- footer Normal, copy pegui -->
     <footer>
         <ul class="ft-list ft">
             <li>
