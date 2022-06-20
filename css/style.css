@@ -54,7 +54,7 @@ body {
     transform: skew(340deg);
 }
 
-.btn a {
+.botn a {
     display: block;
     text-decoration: none;
     padding: 6px 10px;
@@ -62,7 +62,7 @@ body {
     border: 2px outset #ff8800;
 }
 
-.btn a:hover {
+.botn a:hover {
     transform: scale(1.1)
 }
 
@@ -244,7 +244,7 @@ main {
 }
 
 .title-h {
-    width: 46rem;
+    width: 50rem;
 }
 
 .title-card {
@@ -538,6 +538,10 @@ main {
     transform: scale(1.1)
 }
 
+.nav-link:hover {
+    color: #fff;
+}
+
 .search {
     border-radius: 0;
 }
@@ -561,11 +565,6 @@ main {
 
 .table {
     margin-bottom: 0;
-}
-
-.table-scale:hover {
-    transform: scale(1.03);
-    transition: .5s;
 }
 
 .resumen-buy {
@@ -908,13 +907,53 @@ footer {
     }
 }
 
+@media (max-width: 768px) {
+
+    .nav-bar {
+        height: 8.5em;
+        justify-content: space-evenly;
+    }
+
+    .list-bar {
+        flex-direction: column;
+    }
+
+    .row-end {
+        align-items: flex-start;
+    }
+
+    .sec-img {
+        width: 16.5em;
+        height: 11em;
+    }
+
+    .container-sec {
+        justify-content: center;
+        padding-top: 75px;
+        padding-bottom: 0px;
+        width: 100%;
+    }
+
+    .section-amd {
+        padding: 70px 0px;
+        width: 8em;
+        height: 4em;
+    }
+
+    .section-intel {
+        padding: 70px 10px;
+        width: 7em;
+        height: 4em;
+    }
+}
+
 @media (max-width: 425px) {
 
     * {
         font-size: 15px;
     }
 
-    .container {
+    .contenedor {
         grid-template-areas:
             "nav nav nav nav"
             "main main main main"
@@ -946,18 +985,18 @@ footer {
     }
 
     .sec-img {
-        width: 21.3em;
-        height: 15em;
+        width: 19.3em;
+        height: 14em;
     }
 
     .section-intel {
-        padding: 60px 15px;
+        padding: 53px 10px;
         width: 8em;
         height: 7em;
     }
 
     .section-amd {
-        padding: 68px 15px;
+        padding: 60px 5px;
         width: 9em;
         height: 6em;
     }
