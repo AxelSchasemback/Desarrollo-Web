@@ -21,15 +21,28 @@ body {
 }
 
 .nav-bar {
-    background-image: linear-gradient(45deg, #070707, #21120100);
+    background-image: linear-gradient(45deg, #070707, #3f3f3f);
     grid-area: nav;
     display: flex;
     width: 100%;
-    justify-content: space-around;
-    background-color: #404040;
     border-bottom: 3px solid #252525;
     font-size: 32px;
     height: 70px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.botn-nav {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+}
+
+.nav-span {
+    display: none;
 }
 
 .container-Nav-section {
@@ -762,7 +775,11 @@ footer {
     }
 
     .cart {
-        display: none;
+        display: inline;
+        position: fixed;
+        top: 38em;
+        right: 1em;
+        z-index: 1;
     }
 
     .cnt-cart {
@@ -802,9 +819,28 @@ footer {
     }
 }
 
+@media (max-width: 1215px) {
+
+    .search-input {
+        display: none;
+    }
+
+    .submit {
+        display: none;
+    }
+}
+
 /* ******** TABLET ********** */
 
 @media (max-width: 1024px) {
+
+    .nav-bar {
+        justify-content: space-evenly;
+    }
+
+    .botn a {
+        padding: 6px 6px;
+    }
 
     .list-bar {
         transform: none;
@@ -819,7 +855,7 @@ footer {
     }
 
     .register {
-        margin: 10px;
+        margin: 0px;
     }
 
     .container-sec {
@@ -892,7 +928,6 @@ footer {
         padding-bottom: 3.5em;
     }
 
-
 /* ****** BT-carrito ***** */
 
     .large {
@@ -906,17 +941,51 @@ footer {
     .navbar-nav {
         transform: none;
     }
+
+    .card-res {
+        width: 90%;
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
 
     .nav-bar {
-        height: 8.5em;
-        justify-content: space-evenly;
+        height: 2em;
+        justify-content: space-between;
+        align-items: flex-start;
     }
 
     .list-bar {
         flex-direction: column;
+    }
+
+    .register {
+        margin: 10px;
+    }
+
+    .navbar-toggler-icon {
+        width: 2.5em;
+        height: 2.5em;
+        padding-top: 3em;
+    }
+
+    .botn-nav {
+        display: flex;
+        z-index: 1;
+        width: 100%;
+        border: none;
+        position: fixed;
+        top: 0;
+        align-items: flex-start;
+        flex-direction: row;
+        justify-content: space-between;
+        background-image: linear-gradient(45deg, #070707, #3f3f3f);
+        border-bottom: 3px solid #252525;
+        border-radius: 0;
+    }
+
+    .nav-span {
+        display: inline-block;
     }
 
     .row-end {
@@ -936,6 +1005,14 @@ footer {
         height: 15em;
     }
 
+    .container-Nav-section {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        padding-bottom: 1em;
+    }
+
     .section-amd {
         padding: 75px 20px;
         width: 8.5em;
@@ -944,6 +1021,16 @@ footer {
     .section-intel {
         padding: 70px 20px;
         width: 8em;
+    }
+
+    .imgLogo {
+        display: none;
+    }
+
+    /* ****BT-carrito ***** */
+
+    .card-res {
+        width: 100%;
     }
 }
 
@@ -965,7 +1052,7 @@ footer {
     }
 
     .nav-bar {
-        height: 6.5em;
+        height: 1em;
         justify-content: space-evenly;
     }
 
@@ -975,6 +1062,12 @@ footer {
 
     .row-end {
         align-items: flex-start;
+    }
+
+    .cart {
+        width: 3.3em;
+        height: 3.3em;
+        top: 50em;
     }
 
     .container-sec {
@@ -1083,17 +1176,22 @@ footer {
         transform: none;
     }
 
-    /* .imgLogo {
+    .imgLogo {
+        display: none;
         width: 6em;
         height: 6em;
     }
 
     .register {
-        width: 5.3em;
-        height: 5.3em;
-    } */
+        width: 3em;
+        height: 3em;
+    }
 
     .card-release-cont {
+        width: 100%;
+    }
+
+    .card-res {
         width: 100%;
     }
 

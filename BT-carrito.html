@@ -17,47 +17,39 @@
 
 <body>
     <!-- Nav - Navegacion -->
-    <nav class="navbar navbar-expand-lg bg-light nav d-flex justify-content-around align-items-center">
+    <nav class="nav-bar navbar navbar-expand-lg navbar-dark bg-primary">
+        <!-- ********* LOGO ********* -->
         <a href="./index.html"><img class="imgLogo" src="./img/logoMinimalista.png" alt="proyectGaming"></a>
-        <div class="collapse d-flex align-items-center" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link botom-nav" aria-current="page" href="./productos.html">Productos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link botom-nav" aria-current="page" href="./combos.html">Nuestros Combos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link botom-nav" href="./ofertas.html">Nuestras Ofertas</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle botom-nav" href="./miCuenta.html" id="navbarDropdown"
-                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Mi Cuenta
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item botom-nav" href="./miCuenta.html">Facturas</a></li>
-                        <li><a class="dropdown-item botom-nav" href="./miCuenta.html">Estado de Compra</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item botom-nav" href="./miCuenta.html">favoritos</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link botom-nav" href="./ayuda.html">Ayuda</a>
-                </li>
+        <button class="navbar-toggler-lg align.middle botn-nav" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon nav-span"></span>
+        <div class="container-Nav-section collapse navbar-collapse" id="navbarToggleExternalContent">
+            <!-- ************ LIST BAR, 5 SECCIONES ************* -->
+            <ul class="list-bar">
+                <li class="botn"><a href="./productos.html">Productos</a></li>
+                <li class="botn"><a href="./combos.html">Nuestros Combos</a></li>
+                <li class="botn"><a href="./ofertas.html">Nuestras Ofertas</a></li>
+                <li class="dropdown botn">
+                <a class="list-account dropdown-toggle" href="./miCuenta.html" role="button" id="dropdownMenuLink"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Mi Cuenta
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">Facturas</a></li>
+                    <li><a class="dropdown-item" href="#">Estado de Compra</a></li>
+                    <li><a class="dropdown-item" href="#">Favoritos</a></li>
+                </ul>
+            </li>
+                <li class="botn"><a href="./ayuda.html">Ayuda</a></li>
             </ul>
         </div>
-        <div class="nav-collapse collapse d-flex align-items-center">
-            <form class="d-flex align-items-center" role="search">
-                <input class="form-control me-2 search-input search" type="search" placeholder="Search"
-                    aria-label="Search">
-                <button class="submit" type="submit">buscar</button>
-            </form>
+        <div class="row-end">
+            <!-- ************ Buscador, REGISTRO, CARRITO, CANTIDAD DEL CARRITO *********** -->
+            <input class="search-input" type="search" placeholder="Buscar producto">
+            <input class="submit" type="submit" value="buscar">
             <a href="./registro.html"><img class="register" src="./icons/icono de usuario.png"></a>
-            <a href="./carrito.html"><img class="cart" src="./icons/carro-de-la-carretilla.png"></a>
-            <span class="cnt-cart"> 3 </span>
+            <a href="./BT-carrito.html"><img class="cart" src="./icons/carro-de-la-carretilla.png"></a>
+            <span class="cnt-cart"> 0 </span>
         </div>
     </nav>
     <!-- container main -->
@@ -149,7 +141,7 @@
         </div>
         <!-- pequeña tabla con resumen de la compra -->
         <!-- flexbox- flex-direccion-column - justify-content-space-between -->
-        <div class="d-flex flex-column flex-lg-row justify-content-between">
+        <div class="card-res d-flex flex-column flex-lg-row justify-content-between">
             <!-- tabla con flexbox y textos centrados -->
             <table class="table resumen-buy table-dark table-striped-columns text-center d-flex justify-content-center">
                 <tr>
@@ -174,10 +166,10 @@
                 </tr>
             </table>
             <!-- card sacada de boostrap -->
-            <div class="col-8 d-flex flex-column">
+            <div class="card-res col-8 d-flex flex-column">
                 <h6 class="producto-release text-center"> Productos Relacionados</h6>
                 <!-- flexbox, resolucion media en adelante space-around -->
-                <div class="d-flex justify-content-md-around">
+                <div class="card-release d-flex justify-content-md-around">
                     <div class="card bg-dark bg-gradient">
                         <img src="./img/Imagen-de-prueba.jpg" class="card-img-top" alt="prueba">
                         <div class="card-body d-flex flex-column justify-content-center">
