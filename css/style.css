@@ -20,6 +20,15 @@ body {
         "footer footer footer footer";
 }
 
+.botn-nav {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+}
+
 .navbar {
     display: none;
 }
@@ -37,15 +46,6 @@ body {
 
 .div-nav {
     height: 4.5em;
-}
-
-.botn-nav {
-    background-color: transparent;
-    border: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 80%;
 }
 
 .nav-span {
