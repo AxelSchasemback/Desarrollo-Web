@@ -16,40 +16,48 @@
 </head>
 
 <body>
-    <!-- Nav - Navegacion -->
-    <nav class="nav-bar navbar navbar-expand-lg navbar-dark bg-primary">
-        <!-- ********* LOGO ********* -->
-        <a href="./index.html"><img class="imgLogo" src="./img/logoMinimalista.png" alt="proyectGaming"></a>
-        <button class="navbar-toggler-lg align.middle botn-nav" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon nav-span"></span>
-        <div class="container-Nav-section collapse navbar-collapse" id="navbarToggleExternalContent">
-            <!-- ************ LIST BAR, 5 SECCIONES ************* -->
-            <ul class="list-bar">
-                <li class="botn"><a href="./productos.html">Productos</a></li>
-                <li class="botn"><a href="./combos.html">Nuestros Combos</a></li>
-                <li class="botn"><a href="./ofertas.html">Nuestras Ofertas</a></li>
-                <li class="dropdown botn">
-                <a class="list-account dropdown-toggle" href="./miCuenta.html" role="button" id="dropdownMenuLink"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    Mi Cuenta
-                </a>
-
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <li><a class="dropdown-item" href="#">Facturas</a></li>
-                    <li><a class="dropdown-item" href="#">Estado de Compra</a></li>
-                    <li><a class="dropdown-item" href="#">Favoritos</a></li>
+    <!-- hamburguesa sacado de boostrap, y quilombo de clases y cosas -->
+    <div class="collapse-md nav-bar" id="navbarToggleExternalContent">
+        <div class="d-flex justify-content-around w-100 div-nav">
+            <a href="./index.html"><img class="imgLogo" src="./img/logoMinimalista.png" alt="proyectGaming"></a>
+            <div class="container-Nav-section navbar-collapse-md" id="navbarToggleExternalContent">
+                <!-- ************ LIST BAR, 5 SECCIONES ************* -->
+                <ul class="list-bar">
+                    <li class="botn"><a href="./productos.html">Productos</a></li>
+                    <li class="botn"><a href="./combos.html">Nuestros Combos</a></li>
+                    <li class="botn"><a href="./ofertas.html">Nuestras Ofertas</a></li>
+                    <li class="dropdown botn">
+                        <a class="list-account dropdown-toggle" href="./miCuenta.html" role="button"
+                            id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            Mi Cuenta
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Facturas</a></li>
+                            <li><a class="dropdown-item" href="#">Estado de Compra</a></li>
+                            <li><a class="dropdown-item" href="#">Favoritos</a></li>
+                        </ul>
+                    </li>
+                    <li class="botn"><a href="./ayuda.html">Ayuda</a></li>
                 </ul>
-            </li>
-                <li class="botn"><a href="./ayuda.html">Ayuda</a></li>
-            </ul>
+            </div>
+            <div class="row-end">
+                <!-- ************ Buscador, REGISTRO, CARRITO, CANTIDAD DEL CARRITO *********** -->
+                <input class="search-input" type="search" placeholder="Buscar producto">
+                <input class="submit" type="submit" value="buscar">
+                <a href="./registro.html"><img class="register" src="./icons/icono de usuario.png"></a>
+                <a href="./BT-carrito.html"><img class="cart" src="./icons/carro-de-la-carretilla.png"></a>
+                <span class="cnt-cart"> 0 </span>
+            </div>
         </div>
-        <div class="row-end">
-            <!-- ************ Buscador, REGISTRO, CARRITO, CANTIDAD DEL CARRITO *********** -->
-            <input class="search-input" type="search" placeholder="Buscar producto">
-            <input class="submit" type="submit" value="buscar">
-            <a href="./registro.html"><img class="register" src="./icons/icono de usuario.png"></a>
-            <a href="./BT-carrito.html"><img class="cart" src="./icons/carro-de-la-carretilla.png"></a>
-            <span class="cnt-cart"> 0 </span>
+    </div>
+    <!-- Nav - Navegacion -->
+    <nav class="navbar botn-nav navbar-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon nav-span"></span>
+            </button>
         </div>
     </nav>
     <!-- container main -->

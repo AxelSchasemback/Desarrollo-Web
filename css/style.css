@@ -20,6 +20,9 @@ body {
         "footer footer footer footer";
 }
 
+.navbar {
+    display: none;
+}
 .nav-bar {
     background-image: linear-gradient(45deg, #070707, #3f3f3f);
     grid-area: nav;
@@ -50,6 +53,10 @@ body {
     justify-content: flex-start;
     flex-direction: row;
     align-items: center;
+}
+
+.navbar-collapse {
+    display: none;
 }
 
 .imgLogo {
@@ -947,12 +954,27 @@ footer {
     }
 }
 
+/*  para que no aparezca el boton collapsado
+a la hora de agrandar la resolucion */
+@media (min-width: 991px) {
+    .collapse:not(.show) {
+        display: block;
+    }
+}
+/* hamburguesa Avtivada */
 @media (max-width: 991px) {
 
     .nav-bar {
-        height: 2em;
+        width: 100%;
+        height: 9em;
         justify-content: space-between;
         align-items: flex-start;
+        z-index: 1;
+    }
+
+    .div-nav {
+        z-index: 1;
+        background-image: linear-gradient(45deg, #070707, #3f3f3f);
     }
 
     .list-bar {
@@ -960,7 +982,9 @@ footer {
     }
 
     .register {
-        margin: 10px;
+        margin-top: 1em;
+        width: 4.3em;
+        height: 4.3em;
     }
 
     .navbar-toggler-icon {
@@ -970,18 +994,9 @@ footer {
     }
 
     .botn-nav {
-        display: flex;
         z-index: 1;
-        width: 100%;
-        border: none;
         position: fixed;
-        top: 0;
-        align-items: flex-start;
-        flex-direction: row;
-        justify-content: space-between;
-        background-image: linear-gradient(45deg, #070707, #3f3f3f);
-        border-bottom: 3px solid #252525;
-        border-radius: 0;
+        width: 0;
     }
 
     .nav-span {
