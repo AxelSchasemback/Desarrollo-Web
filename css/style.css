@@ -46,6 +46,8 @@ body {
 
 .div-nav {
     height: 4.5em;
+    display: flex;
+    align-items: center;
 }
 
 .nav-span {
@@ -100,7 +102,7 @@ a:hover {
 }
 
 dl, ol, ul {
-    margin-top: 1em;
+    margin-top: 0em;
     margin-bottom: 0rem;
 }
 ol, ul {
@@ -977,6 +979,7 @@ a la hora de agrandar la resolucion */
     }
 
     .div-nav {
+        align-items: flex-start;
         z-index: 1;
     }
 
