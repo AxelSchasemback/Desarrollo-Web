@@ -100,7 +100,7 @@ a:hover {
 }
 
 dl, ol, ul {
-    margin-top: 0;
+    margin-top: 1em;
     margin-bottom: 0rem;
 }
 ol, ul {
@@ -966,10 +966,14 @@ a la hora de agrandar la resolucion */
 
     .nav-bar {
         width: 100%;
-        height: 9em;
+        height: 10em;
         justify-content: space-between;
         align-items: flex-start;
         z-index: 1;
+    }
+
+    .navbar {
+        display: flex;
     }
 
     .div-nav {
@@ -1066,7 +1070,7 @@ a la hora de agrandar la resolucion */
     }
 
     .nav-bar {
-        height: 1em;
+        height: 8em;
         justify-content: space-evenly;
     }
 
