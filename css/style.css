@@ -48,6 +48,7 @@ body {
     height: 4.5em;
     display: flex;
     align-items: center;
+    justify-content: space-around;
 }
 
 .nav-span {
@@ -969,6 +970,7 @@ a la hora de agrandar la resolucion */
     .nav-bar {
         width: 100%;
         height: 10em;
+        position: fixed;
         justify-content: space-between;
         align-items: flex-start;
         z-index: 1;
@@ -981,6 +983,7 @@ a la hora de agrandar la resolucion */
     .div-nav {
         align-items: flex-start;
         z-index: 1;
+        justify-content: space-evenly;
     }
 
     .list-bar {
@@ -1001,6 +1004,7 @@ a la hora de agrandar la resolucion */
 
     .botn-nav {
         z-index: 1;
+        top: 0;
         position: fixed;
         width: 0;
     }
@@ -1045,7 +1049,9 @@ a la hora de agrandar la resolucion */
     }
 
     .imgLogo {
-        display: none;
+        margin-top: 1em;
+        width: 4.3em;
+        height: 4.3em;
     }
 
     /* ****BT-carrito ***** */
@@ -1198,9 +1204,9 @@ a la hora de agrandar la resolucion */
     }
 
     .imgLogo {
-        display: none;
-        width: 6em;
-        height: 6em;
+        width: 3em;
+        height: 3em;
+        margin-left: 3em;
     }
 
     .register {
