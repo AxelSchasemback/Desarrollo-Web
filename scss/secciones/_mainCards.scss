@@ -1,0 +1,250 @@
+.container-sec {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding-top: 8em;
+    padding-bottom: 50px;
+    width: 34em;
+    height: 27.5em;
+}
+
+.flex-absolute {
+    position: relative;
+}
+
+.sec-img {
+    display: inline-block;
+    width: 34em;
+    height: 20em;
+    position: relative;
+}
+
+.section-intel {
+    padding: 125px 50px;
+    width: 17em;
+    left: 0px;
+    position: absolute;
+
+    &:hover {
+        animation-name: imgAmdIntel;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+}
+
+.section-amd {
+    padding: 135px 50px;
+    width: 17em;
+    right: 0px;
+    position: absolute;
+
+    &:hover {
+        animation-name: imgAmdIntel;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+}
+
+.container-table {
+    display: flex;
+    padding-bottom: 50px;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.title-h {
+    width: 50rem;
+}
+
+.title-card {
+    padding-top: 2em;
+    display: block;
+    text-align: center;
+}
+
+.gen-card {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card-product {
+    display: inline-block;
+    margin: 20px 30px 20px;
+}
+
+.col-md-card {
+    display: block;
+    padding: 10px;
+    position: relative;
+    background-color: #1F1F1F;
+    border: 2px outset #ff8800;
+
+    &:hover {
+        transform: scale(1.1)
+    }
+}
+
+.img-p {
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+}
+
+.stock {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #000;
+    display: inline-block;
+    padding: 0.35em 0.65em;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+}
+
+.fav-start {
+    display: inline-block;
+    width: 30px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: black;
+
+    &:hover {
+        transform: scale(1.1);
+        color: yellow;
+    }
+
+    &:before:hover {
+        color: yellow;
+    }
+}
+
+.name-prod {
+    display: block;
+    text-align: center;
+    font-weight: bolder;
+    margin: 5px;
+}
+
+.price-prod {
+    display: block;
+    text-align: center;
+    font-weight: bolder;
+    margin: 5px;
+}
+
+.btn-cart {
+    display: block;
+    margin: auto;
+    margin-top: 5px;
+    font-size: 15px;
+    position: relative;
+    padding: 8px;
+    background-color: #212529;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.btn-outline-dark:hover {
+    border-color: #212529;
+    transform: scale(1.1);
+    transition: all .3s;
+}
+
+// *** ofertas.html ***
+
+.red {
+    color: red;
+}
+
+@media (max-width: 1024px) {
+
+    .container-sec {
+        justify-content: flex-start;
+        width: 25.5em;
+        height: 25em;
+    }
+
+    .sec-img {
+        width: 25.5em;
+        height: 14em;
+    }
+
+    .section-intel {
+        padding: 80px 35px;
+        width: 12.5em;
+    }
+
+    .section-amd {
+        padding: 90px 35px;
+        width: 12.5em;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .sec-img {
+        width: 16.5em;
+        height: 11em;
+    }
+
+    .container-sec {
+        justify-content: center;
+        padding-top: 75px;
+        padding-bottom: 0px;
+        width: 100%;
+        height: 15em;
+    }
+
+    .section-amd {
+        padding: 75px 20px;
+        width: 8.5em;
+    }
+
+    .section-intel {
+        padding: 70px 20px;
+        width: 8em;
+    }
+}
+
+@media (max-width: 425px) {
+
+    .container-sec {
+        justify-content: center;
+        padding-top: 75px;
+        padding-bottom: 0px;
+        width: 100%;
+    }
+
+    .sec-img {
+        width: 19.3em;
+        height: 14em;
+    }
+
+    .section-intel {
+        padding: 70px 20px;
+        width: 10em;
+    }
+
+    .section-amd {
+        padding: 70px 10px;
+        width: 10em;
+    }
+
+    .title-card {
+        margin-top: 75px;
+        font-size: 20px;
+    }
+
+    .fav-start {
+        bottom: 235px;
+    }
+}

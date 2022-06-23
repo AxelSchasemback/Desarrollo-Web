@@ -1,0 +1,124 @@
+.div-account {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.avatar {
+    height: 17em;
+    width: 15em;
+    margin: 50px;
+    border: 2px outset #ff8800;
+}
+
+.info-user {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding-top: 60px;
+}
+
+
+.info-user p {
+    display: inline-block;
+    padding-bottom: 25px;
+}
+
+#description {
+    background-color: #141414;
+    border: 1px outset #ff8800;
+    padding-left: 5px;
+    padding-top: 5px;
+    width: 30em;
+}
+
+.btn-register {
+    margin-top: 10px;
+    color: #ffffff12;
+}
+
+.btn-register:hover {
+    color: white;
+}
+
+.info-account {
+    padding: 50px;
+}
+
+.info-account p {
+    padding-bottom: 50px;
+}
+
+.info-account b {
+    color: #ff8800;
+}
+
+
+.title {
+    margin-bottom: 10px;
+}
+
+.anchor {
+    display: inline-block;
+    color: #ff8800;
+
+    &:hover {
+        transform: scale(1.2);
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 1440px) {
+
+    .avatar {
+        margin: 50px auto;
+    }
+
+    .info-user {
+        padding: 60px;
+    }
+
+    #description {
+        width: 25em;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .avatar {
+        margin: 50px auto;
+    }
+
+    .info-user {
+        width: 70%;
+        padding-top: 0px;
+        padding-left: 50px;
+    }
+
+    #description {
+        width: 20em;
+    }
+}
+
+@media (max-width: 425px) {
+
+    .avatar {
+        height: 10em;
+        width: 9em;
+        margin: 30px auto;
+    }
+
+    .info-user {
+        width: 90%;
+        padding: 0px;
+        padding-left: 20px;
+    }
+
+    #description {
+        width: 17em;
+    }
+
+    .info-account {
+        padding: 50px 25px;
+    }
+}
