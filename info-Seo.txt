@@ -1,0 +1,38 @@
+
+
+
+En la pagina index.html sumé el SEO con las siguientes características:
+Encabezado: Arreglo de los H1 ,H2 y H3 en orden, no hay cambios de textos
+Descripción: mediante la etiqueta meta name description, agregué:
+ “Pagina dedicada al mundo gamer. Configura tu computadora, nosotros la armamos. El Mejor Precio. La Mejor Atencion. Black Week. La Mejor Financiacion. Las Mejores Ofertas."
+Palabras clave: mediante la etiqueta meta name keywords, agregué:
+"pc, computadora, destacado, recomendado, precio, calidad, envio, domicilio, armado">
+
+En la pagina productos.html sumé el SEO con las siguientes características:
+Encabezado: Arreglo de los H1 y H2 en orden, no hay cambios de textos
+Descripción: mediante la etiqueta meta name description, agregué:
+"Compra los productos para tu pc gamer en el sitio número uno de Argentina."
+Palabras clave: mediante la etiqueta meta name keywords, agregué:
+"hardware, amd, intel, ryzen, placas, procesadores, productos"
+
+En la pagina ofertas.html sumé el SEO con las siguientes características:
+Encabezado: Arreglo de los H1 y H2 en orden, no hay cambios de textos
+Descripción: mediante la etiqueta meta name description, agregué:
+"Envíos Gratis en el día, Comprá Pc Oferta en cuotas sin interés! Conocé nuestras increíbles ofertas y promociones en nuestros productos."
+Palabras clave: mediante la etiqueta meta name keywords, agregué:
+"ofertas, especial, interes, cuotas, 12, promociones"
+
+En la pagina combos.html sumé el SEO con las siguientes características:
+Encabezado: Arreglo de los H1 y H2 en orden, no hay cambios de textos
+Descripción: mediante la etiqueta meta name description, agregué:
+"Compra en 12 cuotas sin interés. Ahora retirando también podes abonar en efectivo o por QR. PCs armadas listas para usar"
+Palabras clave: mediante la etiqueta meta name keywords, agregué:
+"pcs, armadas, combos, preparados, listos, usar, kit, actualizacion"
+
+En la pagina miCuenta.html sumé el SEO con las siguientes características:
+Encabezado: Arreglo de los H1, H2 y H3 en orden, no hay cambios de textos
+Descripción: mediante la etiqueta meta name description, agregué:
+"tu perfil, tu informacion, tus productos favoritos listos para comprar, toda tu informacion aqui"
+Palabras clave: mediante la etiqueta meta name keywords, agregué:
+"perfil, usuario, compras, info, facturas, favorito"
+
