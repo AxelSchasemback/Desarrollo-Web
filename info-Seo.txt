@@ -5,9 +5,8 @@ arreglamos footer con "margin-bottom: 0"
 agregamos el sitemap.xml
 cambiamos el titulo de todos los html. como "PG - titulo de pagina"
 
-Agregamos Variable _scale.scss a todas las secciones de scss
-Agregamos Vareiable extend a _header.scss, mainCards.scss y a _registro.scss
-
+Agregamos Variable extend a _header.scss, _mainCards.scss y a _registro.scss
+Agregamos variable mixins a todas las secciones de scss
 
 En la pagina index.html sumé el SEO con las siguientes características:
 Encabezado: Arreglo de los H1 ,H2 y H3 en orden, no hay cambios de textos
