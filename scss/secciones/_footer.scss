@@ -13,6 +13,7 @@ footer {
     align-content: space-around;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    margin-bottom: 0;
 }
 
 .ft-list li {
@@ -28,7 +29,7 @@ footer {
     align-items: center;
 
     &:hover {
-        transform: scale(1.1)
+        transform: $scale;
     }
 }
 

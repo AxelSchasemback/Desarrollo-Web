@@ -31,7 +31,7 @@
     height: 23rem;
 
     &:hover {
-        transform: scale(1.03);
+        transform: $scale + 0.2;
     }
 }
 

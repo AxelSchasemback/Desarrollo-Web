@@ -1,3 +1,11 @@
+a .register:hover, a .cart:hover {
+  background-color: #ff8800;
+  transform: scale(1.1); }
+
+.botn a, .search-input, .submit, .col-md-card, .color-input {
+  background-color: #1F1F1F;
+  border: 2px outset #ff8800; }
+
 * {
   padding: 0;
   margin: 0;
@@ -60,8 +68,6 @@ body {
   display: block;
   text-decoration: none;
   padding: 6px 10px;
-  background-color: #1F1F1F;
-  border: 2px outset #ff8800;
   color: #fff; }
   .botn a:hover {
     transform: scale(1.1); }
@@ -88,8 +94,6 @@ a {
   flex-direction: row; }
 
 .search-input {
-  background-color: #1F1F1F;
-  border: 2px outset #ff8800;
   font-size: 15px;
   height: 35px;
   width: 15em;
@@ -97,12 +101,10 @@ a {
   margin-right: 5px; }
   .search-input:focus {
     margin-right: 10px;
-    transform: scale(1.05);
+    transform: scale(1.1)-0.5;
     transition: .5s; }
 
 .submit {
-  background-color: #1F1F1F;
-  border: 2px outset #ff8800;
   margin-top: 20px;
   margin-right: 50px;
   padding: 5px;
@@ -110,7 +112,7 @@ a {
   height: 30px;
   width: 75px; }
   .submit:hover {
-    transform: scale(1.05); }
+    transform: scale(1.1)-0.5; }
 
 a .register {
   margin-right: 30px;
@@ -118,9 +120,6 @@ a .register {
   width: 2.3em;
   height: 2.3em;
   border: 3px solid #000; }
-  a .register:hover {
-    background-color: #ff8800;
-    transform: scale(1.1); }
 
 a .cart {
   width: 2.3em;
@@ -129,9 +128,6 @@ a .cart {
   margin-left: 10px;
   margin-right: 10px;
   border: #000 solid; }
-  a .cart:hover {
-    background-color: #ff8800;
-    transform: scale(1.1); }
 
 .cnt-cart {
   font-size: 30px;
@@ -359,9 +355,7 @@ main {
 .col-md-card {
   display: block;
   padding: 10px;
-  position: relative;
-  background-color: #1F1F1F;
-  border: 2px outset #ff8800; }
+  position: relative; }
   .col-md-card:hover {
     transform: scale(1.1); }
 
@@ -534,8 +528,8 @@ main {
   display: inline-block;
   color: #ff8800; }
   .anchor:hover {
-    transform: scale(1.2);
-    margin-left: 10px; }
+    margin-left: 10px;
+    transform: scale(1.1) 0.1; }
 
 @media (max-width: 1440px) {
   .avatar {
@@ -591,7 +585,7 @@ main {
   width: 85px; }
   .help-submit:hover {
     border: 2px outset #f8a546;
-    transform: scale(1.2);
+    transform: scale(1.1)0.1;
     transition: transform .4s; }
 
 .p-social {
@@ -627,8 +621,6 @@ main {
   padding-bottom: 50px; }
 
 .color-input {
-  background-color: #1F1F1F;
-  border: 2px outset #ff8800;
   padding: 2px 10px;
   margin-right: 50px; }
   .color-input:hover {
@@ -700,7 +692,7 @@ main {
   width: 85px; }
   .help-submit:hover {
     border: 2px outset #f8a546;
-    transform: scale(1.2);
+    transform: scale(1.1)0.1;
     transition: transform .4s; }
 
 .p-social {
@@ -747,7 +739,7 @@ main {
   width: 11rem;
   height: 23rem; }
   .card:hover {
-    transform: scale(1.03); }
+    transform: scale(1.1)0.2; }
 
 .producto-release {
   display: inline-block;
@@ -795,7 +787,8 @@ footer {
   flex-direction: column;
   align-content: space-around;
   justify-content: space-evenly;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin-bottom: 0; }
 
 .ft-list li {
   list-style: none;

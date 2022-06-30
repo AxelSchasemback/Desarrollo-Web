@@ -1,4 +1,12 @@
 
+Agregamos carpeta ./pages y metimos todos los html menos el index.
+Vinculamos todos los html y img como corresponde.
+arreglamos footer con "margin-bottom: 0"
+agregamos el sitemap.xml
+cambiamos el titulo de todos los html. como "PG - titulo de pagina"
+
+Agregamos Variable _scale.scss a todas las secciones de scss
+Agregamos Vareiable extend a _header.scss, mainCards.scss y a _registro.scss
 
 
 En la pagina index.html sumé el SEO con las siguientes características:
@@ -36,3 +44,23 @@ Descripción: mediante la etiqueta meta name description, agregué:
 Palabras clave: mediante la etiqueta meta name keywords, agregué:
 "perfil, usuario, compras, info, facturas, favorito"
 
+En la pagina ayuda.html sumé el SEO con las siguientes características:
+Encabezado: Arreglo de los H1 y H2 en orden, no hay cambios de textos
+Descripción: mediante la etiqueta meta name description, agregué:
+"toda la ayudes que necesites en nuestra pagina, contactanos para mas informacion"
+Palabras clave: mediante la etiqueta meta name keywords, agregué:
+"ayuda, contacto, pregunta, redes, sociales, comentario"
+
+En la pagina carrito.html sumé el SEO con las siguientes características:
+Encabezado: Arreglo de los H1, H2, H3, H4 y H5 en orden, no hay cambios de textos
+Descripción: mediante la etiqueta meta name description, agregué:
+"guarda tu carrito de productos que deseas comprar a futuro, todos los productos de pc gaming aquì, en proyect-gaming.com"
+Palabras clave: mediante la etiqueta meta name keywords, agregué:
+"carrito, productos, relacion, precio, total, cantidad"
+
+En la pagina carrito.html sumé el SEO con las siguientes características:
+no hay cambios en el html
+Descripción: mediante la etiqueta meta name description, agregué:
+"Registrate para mantener los precios de tus productos al dia, te notificaremos de cualquier oferta o promocion al instante"
+Palabras clave: mediante la etiqueta meta name keywords, agregué:
+"registro, notificacion, ofertas, informacion, perfil, promocion, descuento"

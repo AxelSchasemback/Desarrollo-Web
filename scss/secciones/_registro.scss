@@ -17,13 +17,12 @@
 
 
 .color-input {
-    background-color: #1F1F1F;
-    border: 2px outset #ff8800;
     padding: 2px 10px;
     margin-right: 50px;
+    @extend %buttons;
 
     &:hover {
-        transform: scale(1.1);
+        transform: $scale;
         transition: .3s;
     }
 }

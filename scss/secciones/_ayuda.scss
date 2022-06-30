@@ -24,7 +24,7 @@
 
     &:hover {
         border: 2px outset #f8a546;
-        transform: scale(1.2);
+        transform: $scale + 0.1;
         transition: transform .4s;
     }
 }
