@@ -8,9 +8,8 @@
 }
 
 .cart-img {
-    width: 23rem;
-    height: 8rem;
     margin-right: 1rem;
+    @include width-height(23rem, 8em);
 }
 
 .table {
@@ -22,16 +21,14 @@
 }
 
 .card-img-top {
-    height: 14rem;
-    width: 11rem;
+    @include width-height(11rem, 14rem);
 }
 
 .card {
-    width: 11rem;
-    height: 23rem;
+    @include width-height(11rem, 23rem);
 
     &:hover {
-        transform: $scale + 0.2;
+        transform: scale(1.1);
     }
 }
 
@@ -73,20 +70,17 @@
     }
 
     .card {
-        width: 8rem;
-        height: 20rem
+        @include width-height(8rem, 20rem);
     }
 
     .card-img-top {
-        height: 11rem;
-        width: 8rem;
+        @include width-height(8rem, 11rem);
     }
 }
 
 @media (max-width: 320px) {
 
     .card-img-top {
-        height: 9rem;
-        width: 6.5rem;
+        @include width-height(6.5rem, 9rem);
     }
 }

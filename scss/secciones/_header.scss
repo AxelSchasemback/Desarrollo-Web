@@ -2,12 +2,11 @@
     background-image: linear-gradient(45deg, #070707, #3f3f3f);
     grid-area: nav;
     display: flex;
-    width: 100%;
     border-bottom: 3px solid #252525;
     font-size: 32px;
-    height: 3em;
     flex-direction: row;
     justify-content: space-between;
+    @include width-height(100%, 3em);
 }
 
 .div-nav {
@@ -19,11 +18,10 @@
 
 .imgLogo {
     margin-left: 10px;
-    width: 3em;
-    height: 3em;
     animation-name: logoAnimated;
     animation-duration: 7s;
     animation-iteration-count: infinite;
+    @include width-height(3em, 3em);
 }
 
 .navbar-collapse {
@@ -56,7 +54,7 @@
     @extend %buttons;
 
     &:hover {
-        transform: $scale;
+        transform: scale(1.1);
     }
 }
 
@@ -89,14 +87,13 @@ a {
 .search-input {
     @extend %buttons;
     font-size: 15px;
-    height: 35px;
-    width: 15em;
     padding: 5px;
     margin-right: 5px;
+    @include width-height(15em, 35px);
 
     &:focus {
         margin-right: 10px;
-        transform: $scale - 0.5;
+        transform: scale(1.05);
         transition: .5s
     }
 }
@@ -106,21 +103,19 @@ a {
     margin-right: 50px;
     padding: 5px;
     font-size: 16px;
-    height: 30px;
-    width: 75px;
     @extend %buttons;
+    @include width-height(75px, 30px);
 
     &:hover {
-        transform: $scale - 0.5;;
+        transform: scale(1.05);
     }
 }
 
 a .register {
     margin-right: 30px;
     margin-top: 10px;
-    width: 2.3em;
-    height: 2.3em;
     border: 3px solid #000;
+    @include width-height(2.3em, 2.3em);
 
     &:hover {
         @extend %hoverCartRegister;
@@ -128,12 +123,11 @@ a .register {
 }
 
 a .cart {
-    width: 2.3em;
-    height: 2.3em;
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
     border: #000 solid;
+    @include width-height(2.3em, 2.3em);
 
     &:hover {
         @extend %hoverCartRegister;
@@ -250,12 +244,11 @@ a la hora de agrandar la resolucion */
 @media (max-width: 991px) {
 
     .nav-bar {
-        width: 100%;
-        height: 10em;
         position: fixed;
         justify-content: space-between;
         align-items: flex-start;
         z-index: 1;
+        @include width-height(100%, 10em);
     }
 
     .container-Nav-section {
@@ -268,8 +261,7 @@ a la hora de agrandar la resolucion */
 
     .imgLogo {
         margin-top: 1em;
-        width: 4.3em;
-        height: 4.3em;
+        @include width-height(4.3em, 4.3em);
     }
 
     .navbar {
@@ -288,14 +280,12 @@ a la hora de agrandar la resolucion */
 
     .register {
         margin-top: 1em;
-        width: 4.3em;
-        height: 4.3em;
+        @include width-height(4.3em, 4.3em);
     }
 
     .navbar-toggler-icon {
-        width: 2.5em;
-        height: 2.5em;
         padding-top: 3em;
+        @include width-height(2.5em, 2.5em);
     }
 
     .botn-nav {
@@ -314,8 +304,7 @@ a la hora de agrandar la resolucion */
     }
 
     .sec-img {
-        width: 16.5em;
-        height: 11em;
+        @include width-height(16.5em, 11em);
     }
 }
 
@@ -331,14 +320,12 @@ a la hora de agrandar la resolucion */
     }
 
     .imgLogo {
-        width: 3em;
-        height: 3em;
         margin-left: 4em;
+        @include width-height(3em, 3em);
     }
 
     .register {
-        width: 3em;
-        height: 3em;
+        @include width-height(3em, 3em);
     }
 
     .list-bar {
@@ -351,21 +338,18 @@ a la hora de agrandar la resolucion */
     }
 
     .cart {
-        width: 3.3em;
-        height: 3.3em;
         top: 50em;
+        @include width-height(3.3em, 3.3em);
     }
 }
 
 @media (max-width: 320px) {
 
     .imgLogo {
-        width: 3em;
-        height: 3em;
+        @include width-height(3em, 3em);
     }
 
     .register {
-        width: 2.3em;
-        height: 2.3em;
+        @include width-height(2.3em, 2.3em);
     }
 }

@@ -4,8 +4,7 @@
     margin: auto;
     padding-top: 8em;
     padding-bottom: 50px;
-    width: 34em;
-    height: 27.5em;
+    @include width-height(34em, 27.5em);
 }
 
 .flex-absolute {
@@ -14,9 +13,8 @@
 
 .sec-img {
     display: inline-block;
-    width: 34em;
-    height: 20em;
     position: relative;
+    @include width-height(34em, 20em);
 }
 
 .section-intel {
@@ -81,15 +79,14 @@
     @extend %buttons;
 
     &:hover {
-        transform: $scale;
+        transform: scale(1.1);
     }
 }
 
 .img-p {
     display: block;
-    width: 150px;
-    height: 150px;
     margin: auto;
+    @include width-height(150px, 150px);
 }
 
 .stock {
@@ -117,7 +114,7 @@
     color: black;
 
     &:hover {
-        transform: $scale;
+        transform: scale(1.1);
         color: yellow;
     }
 
@@ -154,7 +151,7 @@
 
 .btn-outline-dark:hover {
     border-color: #212529;
-    transform: $scale;
+    transform: scale(1.1);
     transition: all .3s;
 }
 
@@ -168,13 +165,11 @@
 
     .container-sec {
         justify-content: flex-start;
-        width: 25.5em;
-        height: 25em;
+        @include width-height(25.5em, 25em);
     }
 
     .sec-img {
-        width: 25.5em;
-        height: 14em;
+        @include width-height(25.5em, 14em);
     }
 
     .section-intel {
@@ -191,16 +186,14 @@
 @media (max-width: 991px) {
 
     .sec-img {
-        width: 16.5em;
-        height: 11em;
+        @include width-height(16.5em, 11em);
     }
 
     .container-sec {
         justify-content: center;
         padding-top: 75px;
         padding-bottom: 0px;
-        width: 100%;
-        height: 15em;
+        @include width-height(100%, 15em);
     }
 
     .section-amd {
@@ -226,6 +219,7 @@
     .sec-img {
         width: 19.3em;
         height: 14em;
+        @include width-height(19.3em, 14em);
     }
 
     .section-intel {

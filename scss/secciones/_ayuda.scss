@@ -19,12 +19,11 @@
     margin-top: 20px;
     padding: 5px;
     font-size: 24px;
-    height: 40px;
-    width: 85px;
+    @include width-height(85px, 40px);
 
     &:hover {
         border: 2px outset #f8a546;
-        transform: $scale + 0.1;
+        transform: scale(1.2);
         transition: transform .4s;
     }
 }

@@ -25,12 +25,12 @@ body {
   background-image: linear-gradient(45deg, #070707, #3f3f3f);
   grid-area: nav;
   display: flex;
-  width: 100%;
   border-bottom: 3px solid #252525;
   font-size: 32px;
-  height: 3em;
   flex-direction: row;
-  justify-content: space-between; }
+  justify-content: space-between;
+  width: 100%;
+  height: 3em; }
 
 .div-nav {
   height: 4.5em;
@@ -40,11 +40,11 @@ body {
 
 .imgLogo {
   margin-left: 10px;
-  width: 3em;
-  height: 3em;
   animation-name: logoAnimated;
   animation-duration: 7s;
-  animation-iteration-count: infinite; }
+  animation-iteration-count: infinite;
+  width: 3em;
+  height: 3em; }
 
 .navbar-collapse {
   display: none; }
@@ -95,13 +95,13 @@ a {
 
 .search-input {
   font-size: 15px;
-  height: 35px;
-  width: 15em;
   padding: 5px;
-  margin-right: 5px; }
+  margin-right: 5px;
+  width: 15em;
+  height: 35px; }
   .search-input:focus {
     margin-right: 10px;
-    transform: scale(1.1)-0.5;
+    transform: scale(1.05);
     transition: .5s; }
 
 .submit {
@@ -109,25 +109,25 @@ a {
   margin-right: 50px;
   padding: 5px;
   font-size: 16px;
-  height: 30px;
-  width: 75px; }
+  width: 75px;
+  height: 30px; }
   .submit:hover {
-    transform: scale(1.1)-0.5; }
+    transform: scale(1.05); }
 
 a .register {
   margin-right: 30px;
   margin-top: 10px;
+  border: 3px solid #000;
   width: 2.3em;
-  height: 2.3em;
-  border: 3px solid #000; }
+  height: 2.3em; }
 
 a .cart {
-  width: 2.3em;
-  height: 2.3em;
   margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
-  border: #000 solid; }
+  border: #000 solid;
+  width: 2.3em;
+  height: 2.3em; }
 
 .cnt-cart {
   font-size: 30px;
@@ -202,12 +202,12 @@ a la hora de agrandar la resolucion */
 /* hamburguesa Avtivada */
 @media (max-width: 991px) {
   .nav-bar {
-    width: 100%;
-    height: 10em;
     position: fixed;
     justify-content: space-between;
     align-items: flex-start;
-    z-index: 1; }
+    z-index: 1;
+    width: 100%;
+    height: 10em; }
   .container-Nav-section {
     display: flex;
     justify-content: center;
@@ -231,9 +231,9 @@ a la hora de agrandar la resolucion */
     width: 4.3em;
     height: 4.3em; }
   .navbar-toggler-icon {
+    padding-top: 3em;
     width: 2.5em;
-    height: 2.5em;
-    padding-top: 3em; }
+    height: 2.5em; }
   .botn-nav {
     z-index: 1;
     top: 0;
@@ -254,9 +254,9 @@ a la hora de agrandar la resolucion */
     height: 8em;
     justify-content: space-evenly; }
   .imgLogo {
+    margin-left: 4em;
     width: 3em;
-    height: 3em;
-    margin-left: 4em; }
+    height: 3em; }
   .register {
     width: 3em;
     height: 3em; }
@@ -266,9 +266,9 @@ a la hora de agrandar la resolucion */
   .row-end {
     align-items: flex-start; }
   .cart {
+    top: 50em;
     width: 3.3em;
-    height: 3.3em;
-    top: 50em; } }
+    height: 3.3em; } }
 
 @media (max-width: 320px) {
   .imgLogo {
@@ -304,9 +304,9 @@ main {
 
 .sec-img {
   display: inline-block;
+  position: relative;
   width: 34em;
-  height: 20em;
-  position: relative; }
+  height: 20em; }
 
 .section-intel {
   padding: 125px 50px;
@@ -361,9 +361,9 @@ main {
 
 .img-p {
   display: block;
+  margin: auto;
   width: 150px;
-  height: 150px;
-  margin: auto; }
+  height: 150px; }
 
 .stock {
   position: absolute;
@@ -464,6 +464,8 @@ main {
     width: 100%; }
   .sec-img {
     width: 19.3em;
+    height: 14em;
+    width: 19.3em;
     height: 14em; }
   .section-intel {
     padding: 70px 20px;
@@ -483,10 +485,10 @@ main {
   flex-wrap: wrap; }
 
 .avatar {
-  height: 17em;
-  width: 15em;
   margin: 50px;
-  border: 2px outset #ff8800; }
+  border: 2px outset #ff8800;
+  width: 15em;
+  height: 17em; }
 
 .info-user {
   display: flex;
@@ -529,7 +531,7 @@ main {
   color: #ff8800; }
   .anchor:hover {
     margin-left: 10px;
-    transform: scale(1.1) 0.1; }
+    transform: scale(1.2); }
 
 @media (max-width: 1440px) {
   .avatar {
@@ -551,9 +553,9 @@ main {
 
 @media (max-width: 425px) {
   .avatar {
-    height: 10em;
+    margin: 30px auto;
     width: 9em;
-    margin: 30px auto; }
+    height: 10em; }
   .info-user {
     width: 90%;
     padding: 0px;
@@ -581,11 +583,11 @@ main {
   margin-top: 20px;
   padding: 5px;
   font-size: 24px;
-  height: 40px;
-  width: 85px; }
+  width: 85px;
+  height: 40px; }
   .help-submit:hover {
     border: 2px outset #f8a546;
-    transform: scale(1.1)0.1;
+    transform: scale(1.2);
     transition: transform .4s; }
 
 .p-social {
@@ -688,11 +690,11 @@ main {
   margin-top: 20px;
   padding: 5px;
   font-size: 24px;
-  height: 40px;
-  width: 85px; }
+  width: 85px;
+  height: 40px; }
   .help-submit:hover {
     border: 2px outset #f8a546;
-    transform: scale(1.1)0.1;
+    transform: scale(1.2);
     transition: transform .4s; }
 
 .p-social {
@@ -721,9 +723,9 @@ main {
   margin-bottom: 3rem; }
 
 .cart-img {
+  margin-right: 1rem;
   width: 23rem;
-  height: 8rem;
-  margin-right: 1rem; }
+  height: 8em; }
 
 .table {
   margin-bottom: 0; }
@@ -732,14 +734,14 @@ main {
   width: 10rem; }
 
 .card-img-top {
-  height: 14rem;
-  width: 11rem; }
+  width: 11rem;
+  height: 14rem; }
 
 .card {
   width: 11rem;
   height: 23rem; }
   .card:hover {
-    transform: scale(1.1)0.2; }
+    transform: scale(1.1); }
 
 .producto-release {
   display: inline-block;
@@ -766,13 +768,13 @@ main {
     width: 8rem;
     height: 20rem; }
   .card-img-top {
-    height: 11rem;
-    width: 8rem; } }
+    width: 8rem;
+    height: 11rem; } }
 
 @media (max-width: 320px) {
   .card-img-top {
-    height: 9rem;
-    width: 6.5rem; } }
+    width: 6.5rem;
+    height: 9rem; } }
 
 footer {
   grid-area: footer; }

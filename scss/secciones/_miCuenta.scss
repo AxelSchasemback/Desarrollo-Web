@@ -5,10 +5,9 @@
 }
 
 .avatar {
-    height: 17em;
-    width: 15em;
     margin: 50px;
     border: 2px outset #ff8800;
+    @include width-height(15em, 17em);
 }
 
 .info-user {
@@ -64,7 +63,7 @@
 
     &:hover {
         margin-left: 10px;
-        transform: $scale 0.1;
+        transform: scale(1.2);
     }
 }
 
@@ -103,9 +102,8 @@
 @media (max-width: 425px) {
 
     .avatar {
-        height: 10em;
-        width: 9em;
         margin: 30px auto;
+        @include width-height(9em, 10em);
     }
 
     .info-user {

@@ -1,0 +1,4 @@
+@mixin width-height($ancho, $largo) {
+    width: $ancho;
+    height: $largo;
+}
