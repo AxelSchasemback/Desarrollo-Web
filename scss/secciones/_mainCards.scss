@@ -245,6 +245,11 @@
         padding: 70px 20px;
         width: 8em;
     }
+
+    .col-md-card {
+        height: 17em;
+        width: 9em;
+    }
 }
 
 @media (max-width: 425px) {
@@ -270,6 +275,11 @@
     .section-amd {
         padding: 70px 10px;
         width: 10em;
+    }
+
+    .col-md-card {
+        height: 17em;
+        width: 9em;
     }
 
     .title-card {
