@@ -11,9 +11,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"
         defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js" defer></script>
+    <script src="./js/main.js" defer></script>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link rel="shotcut icon" href="./icons/iconLogo.png">
     <title>PG - Inicio</title>
@@ -56,7 +59,7 @@
                             <input class="submit" type="submit" value="buscar">
                             <a href="./pages/registro.html"><img class="register" src="./img/usuario.png"></a>
                             <a href="./pages/carrito.html"><img class="cart" src="./img/carretilla.png"></a>
-                            <span class="cnt-cart"> 0 </span>
+                            <span class="cnt-cart" id="cnt"> 0 </span>
                         </div>
                     </div>
                 </div>
@@ -105,8 +108,8 @@
                                     <span class="fav-start fa fa-star"></span>
                                     <div class="col-md-subCard">
                                         <p class="name-prod">Teclado Razer</p>
-                                        <span class="price-prod">$9999</span>
-                                        <button class="btn-cart btn-outline-dark">Add to Cart</button>
+                                        <span class="price-prod">$24.299</span>
+                                        <button class="btn-cart btn-outline-dark" onclick=agregar1()>Add to Cart</button>
                                     </div>
                                 </div>
                             </td>
@@ -117,8 +120,8 @@
                                     <span class="fav-start fa fa-star"></span>
                                     <div class="col-md-subCard">
                                         <p class="name-prod">Mouse Logitech</p>
-                                        <span class="price-prod">$9999</span>
-                                        <button class="btn-cart btn-outline-dark">Add to Cart</button>
+                                        <span class="price-prod">$6.199</span>
+                                        <button class="btn-cart btn-outline-dark" onclick=agregar1()>Add to Cart</button>
                                     </div>
                                 </div>
                             </td>
@@ -129,8 +132,8 @@
                                     <span class="fav-start fa fa-star"></span>
                                     <div class="col-md-subCard">
                                         <p class="name-prod">Pad HyperX</p>
-                                        <span class="price-prod">$9999</span>
-                                        <button class="btn-cart btn-outline-dark">Add to Cart</button>
+                                        <span class="price-prod">$2.719</span>
+                                        <button class="btn-cart btn-outline-dark" onclick=agregar2()>Add to Cart</button>
                                     </div>
                                 </div>
                             </td>
@@ -142,8 +145,8 @@
                                     <span class="fav-start fa fa-star"></span>
                                     <div class="col-md-subCard">
                                         <p class="name-prod">Monitor Gigabyte 32'</p>
-                                        <span class="price-prod">$9999</span>
-                                        <button class="btn-cart btn-outline-dark">Add to Cart</button>
+                                        <span class="price-prod">$141.739</span>
+                                        <button class="btn-cart btn-outline-dark" onclick=agregar2()>Add to Cart</button>
                                     </div>
                                 </div>
                             </td>
@@ -167,8 +170,8 @@
                                 <span class="fav-start fa fa-star"></span>
                                 <div class="col-md-subCard">
                                     <p class="name-prod">Combo Intel i5</p>
-                                    <span class="price-prod">$9999</span>
-                                    <button class="btn-cart btn-outline-dark">Add to Cart</button>
+                                    <span class="price-prod">$25.059</span>
+                                    <button class="btn-cart btn-outline-dark" onclick=agregar1()>Add to Cart</button>
                                 </div>
                             </div>
                         </td>
@@ -179,8 +182,8 @@
                                 <span class="fav-start fa fa-star"></span>
                                 <div class="col-md-subCard">
                                     <p class="name-prod">Combo Intel i9</p>
-                                    <span class="price-prod">$9999</span>
-                                    <button class="btn-cart btn-outline-dark">Add to Cart</button>
+                                    <span class="price-prod">$94.489</span>
+                                    <button class="btn-cart btn-outline-dark" onclick=agregar1()>Add to Cart</button>
                                 </div>
                             </div>
                         </td>
@@ -191,8 +194,8 @@
                                 <span class="fav-start fa fa-star"></span>
                                 <div class="col-md-subCard">
                                     <p class="name-prod">Combo Ryzen 3</p>
-                                    <span class="price-prod">$9999</span>
-                                    <button class="btn-cart btn-outline-dark">Add to Cart</button>
+                                    <span class="price-prod">$19.199</span>
+                                    <button class="btn-cart btn-outline-dark" onclick=agregar2()>Add to Cart</button>
                                 </div>
                             </div>
                         </td>
@@ -203,8 +206,8 @@
                                 <span class="fav-start fa fa-star"></span>
                                 <div class="col-md-subCard">
                                     <p class="name-prod">Combo Ryzen 7</p>
-                                    <span class="price-prod">$9999</span>
-                                    <button class="btn-cart btn-outline-dark">Add to Cart</button>
+                                    <span class="price-prod">$58.900</span>
+                                    <button class="btn-cart btn-outline-dark" onclick=agregar2()>Add to Cart</button>
                                 </div>
                             </div>
                         </td>
@@ -228,8 +231,8 @@
                                 <span class="fav-start fa fa-star"></span>
                                 <div class="col-md-subCard">
                                     <p class="name-prod">Procesador intel i3</p>
-                                    <p class="price-prod text-success"><s>$99999</s> $55555</p>
-                                    <button class="btn-cart btn-outline-dark">Add to Cart</button>
+                                    <p class="price-prod text-success"><s>$19.220</s> $15.376</p>
+                                    <button class="btn-cart btn-outline-dark" onclick=agregar1()>Add to Cart</button>
                                 </div>
                             </div>
                         </td>
@@ -240,8 +243,8 @@
                                 <span class="fav-start fa fa-star"></span>
                                 <div class="col-md-subCard">
                                     <p class="name-prod">Procesador Intel i5</p>
-                                    <p class="price-prod text-success"><s>$99999</s> $55555</p>
-                                    <button class="btn-cart btn-outline-dark">Add to Cart</button>
+                                    <p class="price-prod text-success"><s>$25.059</s> $20.047</p>
+                                    <button class="btn-cart btn-outline-dark" onclick=agregar1()>Add to Cart</button>
                                 </div>
                             </div>
                         </td>
@@ -252,8 +255,8 @@
                                 <span class="fav-start fa fa-star"></span>
                                 <div class="col-md-subCard">
                                     <p class="name-prod">Procesador Ryzen 3</p>
-                                    <p class="price-prod text-success"><s>$99999</s> $55555</p>
-                                    <button class="btn-cart btn-outline-dark">Add to Cart</button>
+                                    <p class="price-prod text-success"><s>$19.199</s> $15.359</p>
+                                    <button class="btn-cart btn-outline-dark" id="add" onclick=agregar2()>Add to Cart</button>
                                 </div>
                             </div>
                         </td>
@@ -264,8 +267,8 @@
                                 <span class="fav-start fa fa-star"></span>
                                 <div class="col-md-subCard">
                                     <p class="name-prod">Procesador Ryzen 5</p>
-                                    <p class="price-prod text-success"><s>$99999</s> $55555</p>
-                                    <button class="btn-cart btn-outline-dark">Add to Cart</button>
+                                    <p class="price-prod text-success"><s>$28.890</s> $23.112</p>
+                                    <button class="btn-cart btn-outline-dark" onclick=agregar2()>Add to Cart</button>
                                 </div>
                             </div>
                         </td>

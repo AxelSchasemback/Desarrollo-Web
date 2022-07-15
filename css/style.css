@@ -765,8 +765,38 @@ main {
 
 .cart-img {
   margin-right: 1rem;
-  width: 23rem;
-  height: 8em; }
+  width: 10em;
+  height: 10em; }
+
+.desc {
+  align-items: center; }
+
+.parraf-desc {
+  display: flex;
+  justify-content: space-evenly; }
+
+.sum {
+  font-size: 2em; }
+  .sum:hover {
+    transform: scale(1.1); }
+
+.min {
+  font-size: 2em; }
+  .min:hover {
+    transform: scale(1.1); }
+
+.mark {
+  position: relative; }
+
+.xmark {
+  display: inline-block;
+  color: #000;
+  position: absolute;
+  top: 0;
+  right: 0; }
+  .xmark:hover {
+    transform: scale(1.1);
+    color: #fff; }
 
 .table {
   margin-bottom: 0; }
