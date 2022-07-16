@@ -1,6 +1,19 @@
+// un poco de Js para el carrito, solo para que sea un poco dinamico, no esta bien aplicado
+
 let cantidad = 0;
 let cantCarrito = 3;
-let cantProducto = 1;
+let cantProducto1 = 1;
+let cantProducto2 = 1;
+let cantProducto3 = 1;
+let totalProducto1 = 9205;
+let totalProducto2 = 6199;
+let totalProducto3 = 9013;
+let total = 0;
+
+
+function totalCart() {
+    total = totalProducto1 + totalProducto2 + totalProducto3;
+}
 
 const agregar1 = () => {
     cantidad += 1;
@@ -22,7 +35,7 @@ const agregar1 = () => {
 }
 
 const agregar2 = () => {
-    cantidad += 1
+    cantidad += 1;
     document.getElementById('cnt').innerHTML = cantidad
     Toastify({
         text: `Agregaste Producto al carrito`,
@@ -40,32 +53,133 @@ const agregar2 = () => {
     }).showToast();
 }
 
-
-const addCart = () => {
+function addCart1() {
     cantCarrito += 1;
-    cantProducto += 1;
+    cantProducto1 += 1;
+    totalProducto1 += 9205;
+    document.getElementById('totalProducto1').innerHTML = `$${totalProducto1}`
+    document.getElementById('totalPorCantidad1').innerHTML = `$${totalProducto1}`
+    totalCart()
+    document.getElementById('total').innerHTML = `total: $${total}`;
     document.getElementById('cnt-cart').innerHTML = cantCarrito;
-    document.getElementById('cnt-prod').innerHTML = cantProducto;
+    if (cantProducto1 > 0) {
+        document.getElementById('remove1').innerHTML =
+            `<i class="sum bi bi-cart-plus-fill" onclick=addCart1()></i>
+        <span class="fs-4" id="cnt-prod1">${cantProducto1}</span>
+        <i class="min bi bi-cart-dash-fill"
+        onclick=remvCart1()></i>`
+    }
 }
 
-const remvCart = () => {
+function remvCart1() {
     cantCarrito -= 1;
-    cantProducto -= 1;
+    cantProducto1 -= 1;
+    totalProducto1 -= 9205;
+    document.getElementById('totalProducto1').innerHTML = `$${totalProducto1}`
+    document.getElementById('totalPorCantidad1').innerHTML = `$${totalProducto1}`
+    totalCart()
+    document.getElementById('total').innerHTML = `total: $${total}`;
     document.getElementById('cnt-cart').innerHTML = cantCarrito;
-    document.getElementById('cnt-prod').innerHTML = cantProducto;
-    if (cantProducto <= 0) {
-        document.getElementById('remove').innerHTML =
-            `<i class="sum bi bi-cart-plus-fill" onclick=addCart()></i>
-        <span class="fs-4" id="cnt-prod">1</span>
-        <i class="min bi bi-cart-dash-fill" style="
-        display: none;" onclick=remvCart()></i>`
-    }
-    else { document.getElementById('remove').innerHTML =
-            `<i class="sum bi bi-cart-plus-fill" onclick=addCart()></i>
-        <span class="fs-4" id="cnt-prod">1</span>
-        <i class="min bi bi-cart-dash-fill" style="
-        /* display: none; */" 
-        onclick=remvCart()></i>`
+    document.getElementById('cnt-prod1').innerHTML = cantProducto1;
+    if (cantProducto1 == 0) {
+        document.getElementById('remove1').innerHTML =
+            `<i class="sum bi bi-cart-plus-fill" onclick=addCart1()></i>
+        <span class="fs-4" id="cnt-prod1">${cantProducto1}</span>`
     }
 }
+
+
+function addCart2() {
+    cantCarrito += 1;
+    cantProducto2 += 1;
+    totalProducto2 += 6199;
+    document.getElementById('totalProducto2').innerHTML = `$${totalProducto2}`
+    document.getElementById('totalPorCantidad2').innerHTML = `$${totalProducto2}`
+    totalCart()
+    document.getElementById('total').innerHTML = `total: $${total}`;
+    document.getElementById('cnt-cart').innerHTML = cantCarrito;
+    if (cantProducto2 > 0) {
+        document.getElementById('remove2').innerHTML =
+            `<i class="sum bi bi-cart-plus-fill" onclick=addCart2()></i>
+        <span class="fs-4" id="cnt-prod2">${cantProducto2}</span>
+        <i class="min bi bi-cart-dash-fill"
+        onclick=remvCart2()></i>`
+    }
+}
+
+function remvCart2() {
+    cantCarrito -= 1;
+    cantProducto2 -= 1;
+    totalProducto2 -= 6199;
+    document.getElementById('totalProducto2').innerHTML = `$${totalProducto2}`
+    document.getElementById('totalPorCantidad2').innerHTML = `$${totalProducto2}`
+    totalCart()
+    document.getElementById('total').innerHTML = `total: $${total}`;
+    document.getElementById('cnt-cart').innerHTML = cantCarrito;
+    document.getElementById('cnt-prod2').innerHTML = cantProducto2;
+    if (cantProducto2 == 0) {
+        document.getElementById('remove2').innerHTML =
+            `<i class="sum bi bi-cart-plus-fill" onclick=addCart2()></i>
+        <span class="fs-4" id="cnt-prod2">${cantProducto2}</span>`
+    }
+}
+
+function addCart3() {
+    cantCarrito += 1;
+    cantProducto3 += 1;
+    totalProducto3 += 9013;
+    document.getElementById('totalProducto3').innerHTML = `$${totalProducto3}`
+    document.getElementById('totalPorCantidad3').innerHTML = `$${totalProducto3}`
+    totalCart()
+    document.getElementById('total').innerHTML = `total: $${total}`;
+    document.getElementById('cnt-cart').innerHTML = cantCarrito;
+    if (cantProducto3 > 0) {
+        document.getElementById('remove3').innerHTML =
+            `<i class="sum bi bi-cart-plus-fill" onclick=addCart3()></i>
+            <span class="fs-4" id="cnt-prod3">${cantProducto3}</span>
+            <i class="min bi bi-cart-dash-fill" onclick=remvCart3()></i>`
+    }
+}
+
+function remvCart3() {
+    cantCarrito -= 1;
+    cantProducto3 -= 1;
+    totalProducto3 -= 9013;
+    document.getElementById('totalProducto3').innerHTML = `$${totalProducto3}`
+    document.getElementById('totalPorCantidad3').innerHTML = `$${totalProducto3}`
+    totalCart()
+    document.getElementById('total').innerHTML = `total: $${total}`;
+    document.getElementById('cnt-cart').innerHTML = cantCarrito;
+    document.getElementById('cnt-prod3').innerHTML = cantProducto3;
+    if (cantProducto3 == 0) {
+        document.getElementById('remove3').innerHTML =
+            `<i class="sum bi bi-cart-plus-fill" onclick=addCart3()></i>
+        <span class="fs-4" id="cnt-pro3">${cantProducto3}</span>`
+    }
+}
+
+
+function finalizarCompra() {
+    swal({
+        title: "estas seguro con tus productos?",
+        text: "una vez que toques el boton ok, finalizara tu compra!",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+    })
+        .then((sicompra) => {
+            if (sicompra) {
+                document.getElementById('cnt-cart').innerHTML = 0;
+                document.getElementById('tablaProductos').innerHTML = `<b class="fs-3">Tu Carrito esta vacio</b>`
+                document.getElementById('tablaTotal').innerHTML = '...'
+                document.getElementById('tablaTitulo').innerHTML = '...'
+                    swal(`Poof! tu Compra ah sido finalizada \n Puedes Vovler a comprar cuando quieras ;)`, {
+                        icon: "success",
+                    });
+            } else {
+                swal("puedes editar tu compra");
+            }
+        });
+}
+
 
