@@ -492,7 +492,13 @@ main {
     width: 8em; }
   .col-md-card {
     height: 17em;
-    width: 9em; } }
+    width: 9em; }
+  .fond-card1 {
+    width: 9em; }
+  .fond-card2 {
+    width: 9em; }
+  .price-prod {
+    margin: 0px; } }
 
 @media (max-width: 425px) {
   .container-sec {
@@ -518,7 +524,12 @@ main {
     margin-top: 75px;
     font-size: 20px; }
   .fav-start {
-    bottom: 235px; } }
+    bottom: 235px; }
+  .col-md-subCard {
+    height: 7em; }
+  .btn-cart {
+    padding: 4px;
+    font-size: 12px; } }
 
 .div-account {
   display: flex;
@@ -705,13 +716,16 @@ main {
     margin-bottom: 9px; }
   .span-form-check {
     display: inline-block;
-    margin-bottom: 9px;
     padding-right: 20px;
     padding-left: 10px; }
   .checkbox-span {
     display: flex;
     padding-right: 5px;
-    width: 19em; } }
+    width: 24em; } }
+
+@media (max-width: 320px) {
+  .checkbox-span {
+    width: 20em; } }
 
 .fd-help {
   display: flex;

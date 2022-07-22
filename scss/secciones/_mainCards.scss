@@ -250,6 +250,18 @@
         height: 17em;
         width: 9em;
     }
+
+    .fond-card1 {
+        width: 9em;
+    }
+
+    .fond-card2 {
+        width: 9em;
+    }
+
+    .price-prod {
+        margin: 0px;
+    }
 }
 
 @media (max-width: 425px) {
@@ -289,5 +301,14 @@
 
     .fav-start {
         bottom: 235px;
+    }
+
+    .col-md-subCard {
+        height: 7em;
+    }
+
+    .btn-cart {
+        padding: 4px;
+        font-size:12px;
     }
 }
