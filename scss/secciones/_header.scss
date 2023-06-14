@@ -1,0 +1,364 @@
+.nav-bar {
+    grid-area: nav;
+}
+
+.nav-style {
+    background-image: linear-gradient(45deg, #070707, #3f3f3f);
+    border-bottom: 3px solid #252525;
+    font-size: 32px;
+    @include width-height(100%, 3em);
+}
+
+.div-nav {
+    height: 4.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imgLogo {
+    margin-left: 10px;
+    animation-name: logoAnimated;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    @include width-height(3em, 3em);
+}
+
+.navbar-collapse {
+    display: none;
+}
+
+.container-Nav-section {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+}
+
+.list-bar {
+    display: flex;
+    list-style: none;
+    transform: skew(340deg);
+}
+
+.botn {
+    margin-left: 20px;
+    margin-top: 7px;
+}
+
+.botn a {
+    display: block;
+    text-decoration: none;
+    padding: 6px 10px;
+    color: #fff;
+    @extend %buttons;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.dropdown-menu {
+    position: absolute;
+    inset: -10px auto auto 72px;
+    margin: 0px;
+    transform: translate(-74px, 44px);
+    --bs-dropdown-link-hover-color: #fff;
+    --bs-dropdown-bg: none;
+    --bs-dropdown-link-hover-bg: none;
+    --bs-dropdown-padding-y: 0;
+}
+
+a {
+    color: #fff;
+
+    &:hover {
+        color: #fff;
+    }
+}
+
+.row-end {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+}
+
+.search-input {
+    @extend %buttons;
+    font-size: 15px;
+    padding: 5px;
+    margin-right: 5px;
+    @include width-height(15em, 35px);
+
+    &:focus {
+        margin-right: 10px;
+        transform: scale(1.05);
+        transition: .5s
+    }
+}
+
+.submit {
+    margin-top: 20px;
+    margin-right: 50px;
+    padding: 5px;
+    font-size: 16px;
+    @extend %buttons;
+    @include width-height(75px, 30px);
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+a .register {
+    margin-right: 30px;
+    margin-top: 10px;
+    border: 3px solid #000;
+    @include width-height(2.3em, 2.3em);
+
+    &:hover {
+        @extend %hoverCartRegister;
+    }
+}
+
+a .cart {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: #000 solid;
+    @include width-height(2.3em, 2.3em);
+
+    &:hover {
+        @extend %hoverCartRegister;
+    }
+}
+
+.cnt-cart {
+    font-size: 30px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    background-color: #000000;
+    margin-top: 10px;
+    margin-right: 20px;
+    text-align: center;
+    height: 45px;
+    width: 40px;
+    padding: 3px;
+}
+
+.botn-nav {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+}
+
+.navbar {
+    display: none;
+}
+
+.nav-span {
+    display: none;
+}
+
+/* ********* Jquerys ********* */
+
+@media (max-width: 1440px) {
+
+    .btn a {
+        padding: 5px 7px;
+        text-align: center;
+    }
+
+    .search-input {
+        margin-left: 30px;
+        width: 10em;
+    }
+
+    .submit {
+        margin-right: 20px;
+    }
+
+    .cart {
+        display: inline;
+        position: fixed;
+        top: 38em;
+        right: 1em;
+        z-index: 1;
+    }
+
+    .cnt-cart {
+        display: none;
+    }
+}
+
+@media (max-width: 1215px) {
+
+    .search-input {
+        display: none;
+    }
+
+    .submit {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+
+
+    .botn a {
+        padding: 6px 6px;
+    }
+
+    .list-bar {
+        transform: none;
+    }
+
+    .search-input {
+        display: none;
+    }
+
+    .submit {
+        display: none;
+    }
+
+    .register {
+        margin: 0px;
+    }
+}
+
+/*  para que no aparezca el boton collapsado
+a la hora de agrandar la resolucion */
+@media (min-width: 991px) {
+    .collapse:not(.show) {
+        display: block;
+    }
+}
+
+/* hamburguesa Avtivada */
+@media (max-width: 991px) {
+
+    .nav-style {
+        position: fixed;
+        justify-content: space-between;
+        align-items: flex-start;
+        z-index: 1;
+        @include width-height(100%, 10em);
+    }
+
+    .container-Nav-section {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: flex-start;
+        padding-bottom: 1em;
+    }
+
+    .imgLogo {
+        margin-top: 1em;
+        @include width-height(4.3em, 4.3em);
+    }
+
+    .navbar {
+        display: flex;
+    }
+
+    .div-nav {
+        z-index: 1;
+        justify-content: space-evenly;
+        align-items: flex-start;
+    }
+
+    .list-bar {
+        flex-direction: column;
+    }
+
+    .register {
+        margin-top: 1em;
+        @include width-height(4.3em, 4.3em);
+    }
+
+    .navbar-toggler-icon {
+        padding-top: 3em;
+        @include width-height(2.5em, 2.5em);
+    }
+
+    .botn-nav {
+        z-index: 1;
+        top: 0;
+        position: fixed;
+        width: 0;
+    }
+
+    .nav-span {
+        display: inline-block;
+    }
+
+    .row-end {
+        align-items: flex-start;
+    }
+
+    .sec-img {
+        @include width-height(16.5em, 11em);
+    }
+}
+
+@media (max-width: 425px) {
+
+    .container-Nav-section {
+        align-items: flex-start;
+    }
+
+    // .nav-bar {
+        
+    // }
+
+    .nav-style {
+        height: 8em;
+        justify-content: space-evenly;
+    }
+
+    .imgLogo {
+        margin-left: 4em;
+        @include width-height(3em, 3em);
+    }
+
+    .register {
+        @include width-height(3em, 3em);
+    }
+
+    .list-bar {
+        padding-left: 0;
+        flex-direction: column;
+    }
+
+    .row-end {
+        align-items: flex-start;
+    }
+
+    .cart {
+        top: 50em;
+        @include width-height(3.3em, 3.3em);
+    }
+}
+
+@media (max-width: 375px) {
+    .bot-h {
+        padding: 0;
+        @include width-height(3em, 3em);
+    }
+}
+
+@media (max-width: 320px) {
+
+    .imgLogo {
+        @include width-height(3em, 3em);
+    }
+
+    .register {
+        @include width-height(2.3em, 2.3em);
+    }
+}

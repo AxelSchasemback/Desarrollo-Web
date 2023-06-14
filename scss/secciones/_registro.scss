@@ -1,0 +1,100 @@
+.title-reg {
+    padding-top: 60px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.form-reg {
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+    margin-left: 100px;
+}
+
+.form-reg div {
+    padding-bottom: 50px;
+}
+
+
+.color-input {
+    padding: 2px 10px;
+    margin-right: 50px;
+    @extend %buttons;
+
+    &:hover {
+        transform: scale(1.1);
+        transition: .3s;
+    }
+}
+
+.tittle-p {
+    padding-bottom: 10px;
+}
+
+.asterisc-red {
+    color: rgb(161, 4, 4)
+}
+
+.span-form {
+    padding-right: 20px;
+}
+
+@media (max-width: 1440px) {
+
+    .form-reg {
+        padding: 3em 3em 6em 3em;
+        margin-left: 0px;
+    }
+
+    .color-input {
+        margin-right: 0px;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .title-reg {
+        padding-top: 3em;
+        padding-bottom: 2em;
+    }
+
+    .form-reg {
+        padding: 0px;
+        margin-left: 2em;
+        align-items: flex-start;
+    }
+
+    .form-reg div {
+        padding-bottom: 3.5em;
+    }
+}
+
+@media (max-width: 425px) {
+
+    .form-reg {
+        margin-left: 1em;
+    }
+
+    .span-form {
+        display: inline-block;
+        margin-bottom: 9px;
+    }
+
+    .span-form-check {
+        display: inline-block;
+        padding-right: 20px;
+        padding-left: 10px;
+    }
+
+    .checkbox-span {
+        display: flex;
+        padding-right: 5px;
+        width: 24em;
+    }
+}
+
+@media (max-width: 320px) {
+    .checkbox-span {
+        width: 20em;
+    }
+}

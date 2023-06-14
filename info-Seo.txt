@@ -1,0 +1,65 @@
+
+Agregamos carpeta ./pages y metimos todos los html menos el index.
+Vinculamos todos los html y img como corresponde.
+arreglamos footer con "margin-bottom: 0"
+agregamos el sitemap.xml
+cambiamos el titulo de todos los html. como "PG - titulo de pagina"
+
+Agregamos Variable extend a _header.scss, _mainCards.scss y a _registro.scss
+Agregamos variable mixins a todas las secciones de scss
+
+En la pagina index.html sumé el SEO con las siguientes características:
+Encabezado: Arreglo de los H1 ,H2 y H3 en orden, no hay cambios de textos
+Descripción: mediante la etiqueta meta name description, agregué:
+ “Pagina dedicada al mundo gamer. Configura tu computadora, nosotros la armamos. El Mejor Precio. La Mejor Atencion. Black Week. La Mejor Financiacion. Las Mejores Ofertas."
+Palabras clave: mediante la etiqueta meta name keywords, agregué:
+"pc, computadora, destacado, recomendado, precio, calidad, envio, domicilio, armado">
+
+En la pagina productos.html sumé el SEO con las siguientes características:
+Encabezado: Arreglo de los H1 y H2 en orden, no hay cambios de textos
+Descripción: mediante la etiqueta meta name description, agregué:
+"Compra los productos para tu pc gamer en el sitio número uno de Argentina."
+Palabras clave: mediante la etiqueta meta name keywords, agregué:
+"hardware, amd, intel, ryzen, placas, procesadores, productos"
+
+En la pagina ofertas.html sumé el SEO con las siguientes características:
+Encabezado: Arreglo de los H1 y H2 en orden, no hay cambios de textos
+Descripción: mediante la etiqueta meta name description, agregué:
+"Envíos Gratis en el día, Comprá Pc Oferta en cuotas sin interés! Conocé nuestras increíbles ofertas y promociones en nuestros productos."
+Palabras clave: mediante la etiqueta meta name keywords, agregué:
+"ofertas, especial, interes, cuotas, 12, promociones"
+
+En la pagina combos.html sumé el SEO con las siguientes características:
+Encabezado: Arreglo de los H1 y H2 en orden, no hay cambios de textos
+Descripción: mediante la etiqueta meta name description, agregué:
+"Compra en 12 cuotas sin interés. Ahora retirando también podes abonar en efectivo o por QR. PCs armadas listas para usar"
+Palabras clave: mediante la etiqueta meta name keywords, agregué:
+"pcs, armadas, combos, preparados, listos, usar, kit, actualizacion"
+
+En la pagina miCuenta.html sumé el SEO con las siguientes características:
+Encabezado: Arreglo de los H1, H2 y H3 en orden, no hay cambios de textos
+Descripción: mediante la etiqueta meta name description, agregué:
+"tu perfil, tu informacion, tus productos favoritos listos para comprar, toda tu informacion aqui"
+Palabras clave: mediante la etiqueta meta name keywords, agregué:
+"perfil, usuario, compras, info, facturas, favorito"
+
+En la pagina ayuda.html sumé el SEO con las siguientes características:
+Encabezado: Arreglo de los H1 y H2 en orden, no hay cambios de textos
+Descripción: mediante la etiqueta meta name description, agregué:
+"toda la ayudes que necesites en nuestra pagina, contactanos para mas informacion"
+Palabras clave: mediante la etiqueta meta name keywords, agregué:
+"ayuda, contacto, pregunta, redes, sociales, comentario"
+
+En la pagina carrito.html sumé el SEO con las siguientes características:
+Encabezado: Arreglo de los H1, H2, H3, H4 y H5 en orden, no hay cambios de textos
+Descripción: mediante la etiqueta meta name description, agregué:
+"guarda tu carrito de productos que deseas comprar a futuro, todos los productos de pc gaming aquì, en proyect-gaming.com"
+Palabras clave: mediante la etiqueta meta name keywords, agregué:
+"carrito, productos, relacion, precio, total, cantidad"
+
+En la pagina carrito.html sumé el SEO con las siguientes características:
+no hay cambios en el html
+Descripción: mediante la etiqueta meta name description, agregué:
+"Registrate para mantener los precios de tus productos al dia, te notificaremos de cualquier oferta o promocion al instante"
+Palabras clave: mediante la etiqueta meta name keywords, agregué:
+"registro, notificacion, ofertas, informacion, perfil, promocion, descuento"

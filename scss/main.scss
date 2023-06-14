@@ -1,0 +1,59 @@
+//********************* Variables*********************
+
+@import './variables/extend';
+@import './variables/mixins';
+
+// ******************** codigo **********************
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: #fff
+}
+
+body {
+    background-color: #141414;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
+    grid-template-areas:
+        "nav nav nav nav"
+        "... main main ..."
+        "footer footer footer footer";
+}
+
+@import './secciones/header';
+
+main {
+    grid-area: main;
+}
+
+.fondo {
+    background-color: #1f1f1f;
+}
+
+@media (max-width: 425px) {
+
+    * {
+        font-size: 15px;
+    }
+
+    .contenedor {
+        grid-template-areas:
+            "nav nav nav nav"
+            "main main main main"
+            "footer footer footer footer";
+    }
+}
+
+@import './secciones/mainCards';
+@import './secciones/miCuenta';
+@import './secciones/ayuda';
+@import './secciones/registro';
+@import './secciones/ayuda';
+@import './secciones/carrito';
+@import './secciones/footer';
+@import './secciones/keyframes';
