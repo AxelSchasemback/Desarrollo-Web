@@ -19,7 +19,7 @@
         defer></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js" defer></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" defer></script>
-    <script src="../js/main.js" defer></script>
+    <script src="../js/carrito.js" defer></script>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <title>PG - carrito</title>
 </head>
@@ -59,7 +59,7 @@
                         <input class="submit" type="submit" value="buscar">
                         <a href="./registro.html"><img class="register" src="../img/usuario.png"></a>
                         <a href="./carrito.html"><img class="cart" src="../img/carretilla.png"></a>
-                        <span class="cnt-cart" id="cnt-cart"> 3 </span>
+                        <span class="cnt-cart" id="cnt"></span>
                     </div>
                 </div>
             </div>
@@ -92,16 +92,15 @@
                 </thead>
                 <!-- Cuerpo de Tabla -->
                 <tbody id="tablaProductos">
-                    <tr class="table-scale">
-                        <th class="align-middle" scope="row">1</th>
+                    <tr class="table-scale" >
+                        <!-- <th class="align-middle" scope="row">1</th>
                         <td>
-                            <!-- flexBox - col mas ancha - width 100% -->
                             <div class="desc col-sm-1 col-10 d-flex p-2 w-100">
-                                <img class="cart-img" src="../img/productos/teclado-logitech.png" alt="teclado-logitech">
+                                <img class="cart-img" src="../img/productos/teclado-logitech.png"
+                                    alt="teclado-logitech">
                                 <h2 class="fs-4 w-100 align-middle text-center"> Telcado Logitech </h2>
                             </div>
                         </td>
-                        <!-- Tabla de Datos Centradas -->
                         <td class="text-center align-middle" id="precio1">$9205</td>
                         <td class="text-center align-middle">
                             <div class="d-flex flex-column" id="remove1">
@@ -110,18 +109,18 @@
                                 <i class="min bi bi-cart-dash-fill" onclick=remvCart1()></i>
                             </div>
                         </td>
-                        <td class="text-center align-middle mark" id="totalProducto1">$9205</td>
+                        <td class="text-center align-middle mark" id="totalProducto1">$9205</td> -->
                     </tr>
-                    <tr class="table-scale">
+                    <!-- <tr class="table-scale">
                         <th class="align-middle" scope="row">2</th>
                         <td>
-                            <!-- flexBox - col mas ancha - width 100% -->
+                            
                             <div class="desc col-sm-1 col-10 d-flex p-2 w-100">
                                 <img class="cart-img" src="../img/productos/mouse-logitech.png" alt="mouse-logitech">
                                 <h2 class="fs-4 w-100 align-middle text-center"> Mouse Logitech </h2>
                             </div>
                         </td>
-                        <!-- Tabla de Datos Centradas -->
+                        
                         <td class="text-center align-middle" id="precio2">$6199</td>
                         <td class="text-center align-middle">
                             <div class="d-flex flex-column" id="remove2">
@@ -135,13 +134,14 @@
                     <tr class="table-scale">
                         <th class="align-middle" scope="row">3</th>
                         <td>
-                            <!-- flexBox - col mas ancha - width 100% -->
+                            
                             <div class="desc col-sm-1 col-10 d-flex p-2 w-100">
-                                <img class="cart-img" src="../img/productos/pad-mouse-logitech.png" alt="mouse-pad-logitech">
+                                <img class="cart-img" src="../img/productos/pad-mouse-logitech.png"
+                                    alt="mouse-pad-logitech">
                                 <h2 class="fs-4 w-100 align-middle text-center"> Mouse Pad Logitech</h2>
                             </div>
                         </td>
-                        <!-- Tabla de Datos Centradas -->
+                        
                         <td class="text-center align-middle" id="precio3">$9013</td>
                         <td class="text-center align-middle">
                             <div class="d-flex flex-column" id="remove3">
@@ -151,7 +151,7 @@
                             </div>
                         </td>
                         <td class="text-center align-middle mark" id="totalProducto3">$9013</td>
-                    </tr>
+                    </tr> -->
                 </tbody>
             </table>
         </div>
@@ -159,26 +159,27 @@
         <!-- flexbox- flex-direccion-column - justify-content-space-between -->
         <div class="card-res d-flex flex-column flex-lg-row justify-content-between">
             <!-- tabla con flexbox y textos centrados -->
-            <table class="table resumen-buy table-dark table-striped-columns text-center d-flex justify-content-center" id="tablaTotal">
+            <table class="table resumen-buy table-dark table-striped-columns text-center d-flex justify-content-center"
+                id="tablaTotal">
                 <tr>
                     <th class="text-center align-middle">#</th>
                     <th class="text-center fs-6">RESUMEN DE COMPRA</th>
                 </tr>
                 <tr>
                     <th class="text-center">1</th>
-                    <td  id="totalPorCantidad1">$9205</td>
+                    <td id="totalPorCantidad1">$9205</td>
                 </tr>
                 <tr>
                     <th class="text-center">2</th>
-                    <td  id="totalPorCantidad2">$6199</td>
+                    <td id="totalPorCantidad2">$6199</td>
                 </tr>
                 <tr>
                     <th class="text-center">3</th>
-                    <td  id="totalPorCantidad3">$9013</td>
+                    <td id="totalPorCantidad3">$9013</td>
                 </tr>
                 <tr>
                     <th>.</th>
-                    <td  id="total">Total: $24417</td>
+                    <td id="total">Total: $24417</td>
                 </tr>
             </table>
             <!-- card sacada de boostrap -->
@@ -204,7 +205,8 @@
                         </div>
                     </div>
                     <div class="card bg-dark bg-gradient">
-                        <img src="../img/productos/pad-mouse-redDragon.png" class="card-img-top" alt="mouse-pad-redragon">
+                        <img src="../img/productos/pad-mouse-redDragon.png" class="card-img-top"
+                            alt="mouse-pad-redragon">
                         <div class="card-body d-flex flex-column justify-content-center">
                             <p class="card-title text-center">Pad Redragon</p>
                             <p class="card-text text-center">$2299</p>
