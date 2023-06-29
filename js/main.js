@@ -10,6 +10,38 @@ fetch('../data.json')
         generadorCardsDestacadas(productos, tituloCards3, cardsOfertas, 1, 13, 15, 14, 12, "Mejores Ofertas")
     })
 
+let cart = validarStorageCarrito()
+
+const addItem = (category, name, id, precio, imgP, stock, quantity) => {
+    if (isInCart(id)) {
+        let findCart = cart.find(producto => producto.id == id)
+        if (findCart.cant < stock) { findCart.cant = findCart.cant + quantity }
+        cart = [...cart]
+        acumuladorCantidad()
+    }
+    else {
+        cart = [...cart, { category: category, name: name, id: id, precio: precio, imgP: imgP, stock: stock, cant: quantity }]
+        acumuladorCantidad()
+    }
+}
+
+
+const isInCart = (id) => cart.find(product => product.id === id)
+
+
+const acumuladorCantidad = () => {
+    const cantTotal = cart.reduce((cantidad, product) => cantidad + product.cant, 0)
+    localStorage.setItem('acumularCantidadTotal', JSON.stringify(cantTotal))
+    document.getElementById("cnt").innerHTML = cantTotal
+}
+
+acumuladorCantidad()
+
+function validarStorageCarrito() {
+    const validarStoragecart = JSON.parse(localStorage.getItem('carrito'))
+    return validarStoragecart == null ? [] : JSON.parse(localStorage.getItem('carrito'))
+}
+
 
 
 const tituloCards1 = document.getElementById("titleDestacado")
@@ -29,7 +61,7 @@ function generadorCardsDestacadas(producto, param, param2, num, num1, num2, num3
 
     const seleccion = [producto[num1], producto[num2], producto[num3], producto[num4]]
 
-    const prod = seleccion.forEach(e => {
+    seleccion.forEach(e => {
         let card = document.createElement('td')
         card.className = "prdt-1 card-product"
         card.innerHTML = `<div class="fond-card${num}">
@@ -47,7 +79,7 @@ function generadorCardsDestacadas(producto, param, param2, num, num1, num2, num3
         param2.appendChild(card)
     })
 
-    const prod2 = seleccion.forEach(e => {
+    seleccion.forEach(e => {
         const buyBtn = document.getElementById(`btnBuy${[e.id]}`);
         buyBtn.addEventListener('click', function () {
             addItem(e.categoria, e.nombre, e.id, e.precio, e.img, e.stock, 1)
@@ -55,3 +87,5 @@ function generadorCardsDestacadas(producto, param, param2, num, num1, num2, num3
         })
     })
 }
+
+
