@@ -140,7 +140,7 @@ function generadorCardsDestacadas(producto, titulo, cardProducto, clase, p1, p2,
         let card = document.createElement('td')
         card.className = "prdt-1 card-product"
         card.innerHTML = `<div class="fond-card${clase}">
-        <img class="img-p" src="../img/productos/${product.img}" alt=${product.img}>
+        <img class="img-p" src="img/productos/${product.img}" alt=${product.img}>
         <span class="stock" id="segunStock">stock</span>
         <span class="fav-start fa fa-star"></span>
         <div class="col-md-subCard">
