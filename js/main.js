@@ -1,7 +1,7 @@
 
 fetch('data.json')
-    .then((res) => res.json())
-    .then((data) => {
+    .then(res => res.json())
+    .then(data => {
         // Hacemos Fetch con los productos que queremos mostrar en el index
         generadorCardsDestacadas(data.productos, tituloCards1, cardsDestacadas, 1, 11, 1, 4, 19, "Productos Destacados")
 
