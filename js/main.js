@@ -2,13 +2,12 @@
 fetch('data.json')
     .then((res) => res.json())
     .then((data) => {
-        productos = data.productos
         // Hacemos Fetch con los productos que queremos mostrar en el index
-        generadorCardsDestacadas(productos, tituloCards1, cardsDestacadas, 1, 11, 1, 4, 19, "Productos Destacados")
+        generadorCardsDestacadas(data.productos, tituloCards1, cardsDestacadas, 1, 11, 1, 4, 19, "Productos Destacados")
 
-        generadorCardsDestacadas(productos, tituloCards2, cardsCombos, 2, 25, 27, 20, 23, "Combos Destacados")
+        generadorCardsDestacadas(data.productos, tituloCards2, cardsCombos, 2, 25, 27, 20, 23, "Combos Destacados")
 
-        generadorCardsDestacadas(productos, tituloCards3, cardsOfertas, 1, 13, 15, 14, 12, "Mejores Ofertas")
+        generadorCardsDestacadas(data.productos, tituloCards3, cardsOfertas, 1, 13, 15, 14, 12, "Mejores Ofertas")
     })
 
 // funcion de Validacion del carrito
