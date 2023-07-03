@@ -140,16 +140,16 @@ const mostrarTabla = (carrito) => {
             dangerMode: true,
         })
             .then((sicompra) => {
-                if (sicompra) {              //si compra es Verdadero
+                if (sicompra) {              //sicompra es Verdadero
                     removeStock(),              //ejecutamos las siguientes funciones
                         clear(),
                         totalProducts,
                         mostrarCards(storageCart),
                         actualizarCant(),
-                        localStorage.setItem('carrito', JSON.stringify(storageCart))           
-                        swal(`Poof! tu Compra ah sido finalizada \n Puedes Vovler a comprar cuando quieras ;)`, {
-                            icon: "success",
-                        });
+                        localStorage.setItem('carrito', JSON.stringify(storageCart))
+                    swal(`Poof! tu Compra ah sido finalizada \n Puedes Vovler a comprar cuando quieras ;)`, {
+                        icon: "success",
+                    });
                 } else {
                     swal("puedes editar tu compra");       //en caso que sea falso
                     mostrarTabla(storageCart)
@@ -185,45 +185,55 @@ const sumarCant = (id) => {
     }
 }
 
-// funcion para vaciar el carrito
+// funcion para mostrar mensajes cuando el carrito esta vacio
 const clear = () => {
 
+    // dejamos los siguientes mensajes en el HTML cuando este vavcio el carrito
     document.getElementById('tablaProductos').innerHTML = `
     <div 
     style=" display: flex; justify-content: space-evenly;">
     No Hay productos en el carrito 
     </div>`
     document.getElementById('tablaTotal').innerHTML = ""
-    document.getElementById("botonCompra").innerHTML = "<div disbled></div>"
-    return storageCart = []
+    // este inner no funciona, y nose porque no puedo sacar el boton
+    document.getElementById("botonCompra").innerHTML = `<button style="display: none" id="comprar">compra</button>`
 }
 
+// funcion para remover el producto una vez que este tenga 0 cantidad en el carrito
 const removeItem = (id) => {
 
+    // sacamos el producto del Array haciendo un filter, 
+    // dejando todos los productos del carrito menos el que fue seleccionado
     const sacoArray = storageCart.filter((product) => product.id !== id)
 
+    // seteamos el nuevo Array sin el producto
     localStorage.setItem('carrito', JSON.stringify(sacoArray))
 
-    storageCart = JSON.parse(localStorage.getItem('carrito'))
-
+    // ejecutamos funcion de mensajes del HTML
     clear()
 
-    return mostrarTabla(storageCart)
+    // retornamos el storage con el getItem parseado
+    // si no ponia este retorno asi tal cual, no me funcionaba el carrito
+    return storageCart = JSON.parse(localStorage.getItem('carrito'))
 }
 
 // funcion para restar la cantidad del producto
 const restaCant = (id) => {
 
+    // buscamos el producto que vamos a restar la cantidad
     let resta = storageCart.find(e => e.id === id)
 
+    // restamos 1 a la cantidad del producto
     resta.cant = resta.cant - 1
 
+    // vamos actualizando la cantidad total en el HTML
     actualizarCant()
 
-    mostrarTabla(storageCart)
-
+    // si la cantidad del producto es 0, se va sacar el producto del carrito
+    // sino vamos a ir guardando en el localStorage la nueva cantidad del mismo
     resta.cant == 0 ? removeItem(resta.id) : localStorage.setItem('carrito', JSON.stringify(storageCart))
 
+    // vamos actualizando la tabla del HTML
     mostrarTabla(storageCart)
 }
 
