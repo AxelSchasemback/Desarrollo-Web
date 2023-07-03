@@ -11,17 +11,17 @@ fetch('../data.json')
         generadorCardsDestacadas(productos, tituloCards3, cardsOfertas, 1, 13, 15, 14, 12, "Mejores Ofertas")
     })
 
-    // funcion de Validacion del carrito
-    const validarStorageCarrito =() => {
+// funcion de Validacion del carrito
+const validarStorageCarrito = () => {
 
-        //Guardo el parseo del carrito en una variable
-        const validarStoragecart = JSON.parse(localStorage.getItem('carrito'))  
+    //Guardo el parseo del carrito en una variable
+    const validarStoragecart = JSON.parse(localStorage.getItem('carrito'))
 
-        //retornamos la variable, y en caso que tenga valor null vamos a retornar el array vacio, sino el parseo del carrito
-        return validarStoragecart == null ? [] : JSON.parse(localStorage.getItem('carrito')) 
-    }
+    //retornamos la variable, y en caso que tenga valor null vamos a retornar el array vacio, sino el parseo del carrito
+    return validarStoragecart == null ? [] : JSON.parse(localStorage.getItem('carrito'))
+}
 
-    // Ejecutamos validacion sobre la variable
+// Ejecutamos validacion sobre la variable
 let cart = validarStorageCarrito()
 
 // funcion para Buscar un prodcuto en el Array - 
@@ -48,20 +48,57 @@ const addItem = (category, name, id, precio, imgP, stock, quantity) => {
 
     // funcion isinCart va a buscar en el Array cart si ya se encuentra el productob en el Array
     // esta funcion devuelve un booleano TRUE || FALSE
-    if (isInCart(id)) { 
+    if (isInCart(id)) {
         // en caso de ser TRUE definimos el producto seleccionado en el Array
         let findCart = cart.find(producto => producto.id == id)
 
         // Hacemos la Validacion para que el usuario no pueda sobrepasar el Stock del producto
-        if (findCart.cant < stock) { findCart.cant = findCart.cant + quantity }
+        if (findCart.cant < stock) {
+
+            // vamos sumando la cantidad de cada Producto
+            findCart.cant = findCart.cant + quantity
+
+            // ejecutamos la biblioteca Toastify
+            Toastify({
+                text: `Sumaste ${name} al carrito`,
+                duration: 2000,
+                destination: "carrito.html",
+                newWindow: true,
+                close: true,
+                gravity: "bottom", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                    background: "linear-gradient(313deg, #ffc107, #e13b11, #00000080, #000000)",
+                },
+                onClick: function () { } // Callback after click
+            }).showToast();
+        }
 
         // una vez seleccionado y validado el producto, hacemos un Spread Operator para pushear el producto al Array
         cart = [...cart]
 
         // Vamos Actualizando la Cantidad de los productos totales para mostrarlas en el HTML
         acumuladorCantidad()
-    }    
+    }
     else {
+
+        // ejecutamos la biblioteca Toastify
+        Toastify({
+            text: `Agregaste ${name} al carrito`,
+            duration: 2000,
+            destination: "carrito.html",
+            newWindow: true,
+            close: true,
+            gravity: "bottom", // `top` or `bottom`
+            position: "right", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+                background: "linear-gradient(313deg, #0dcaf0, #0842988a, #00000080, #000000)"
+            },
+            onClick: function () { } // Callback after click
+        }).showToast();
+
         // en caso que el producto no se Encuentre en el Carrito
         // vamos a definir una variable para que me devuelva el Stock del producto
         const stockActualizado = JSON.parse(localStorage.getItem(`storageEnStock${id}`)) || stock
@@ -69,11 +106,8 @@ const addItem = (category, name, id, precio, imgP, stock, quantity) => {
         // usamos Spread Operator para pushear el nuevo producto al Array
         cart = [...cart, { category: category, name: name, id: id, precio: precio, imgP: imgP, stock: stockActualizado, cant: quantity }]
         acumuladorCantidad()
-    }    
-}    
-
-
-
+    }
+}
 
 // variables con las id's de las distintas cards que vamos a mostrar
 const tituloCards1 = document.getElementById("titleDestacado")
@@ -123,7 +157,7 @@ function generadorCardsDestacadas(producto, titulo, cardProducto, clase, p1, p2,
     })
 
     // utilizamos forEach para utilizar las propiedades de los productos
-    seleccion.forEach( product => {
+    seleccion.forEach(product => {
 
         // seleccionamos la id del boton que fue seleccionado por el usuario
         const buyBtn = document.getElementById(`btnBuy${[product.id]}`);

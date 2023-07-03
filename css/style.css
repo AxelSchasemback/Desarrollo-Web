@@ -19,7 +19,9 @@ body {
 .contenedor {
   display: grid;
   grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
-  grid-template-areas: "nav nav nav nav" "... main main ..." "footer footer footer footer"; }
+  grid-template-areas: "nav nav nav nav"
+ "... main main ..."
+ "footer footer footer footer"; }
 
 .nav-bar {
   grid-area: nav; }
@@ -292,7 +294,9 @@ main {
   * {
     font-size: 15px; }
   .contenedor {
-    grid-template-areas: "nav nav nav nav" "main main main main" "footer footer footer footer"; } }
+    grid-template-areas: "nav nav nav nav"
+ "main main main main"
+ "footer footer footer footer"; } }
 
 .container-sec {
   display: flex;
@@ -770,8 +774,9 @@ main {
   .fd-help {
     padding-bottom: 0em; } }
 
-.large {
-  height: 80rem; }
+.card-release {
+  margin-bottom: 2rem;
+} 
 
 .cart-h2 {
   padding-top: 5rem;
@@ -826,8 +831,8 @@ main {
   margin-right: 1em; }
 
 @media (max-width: 1024px) {
-  .large {
-    height: 95rem; }
+  .card-release {
+    margin-bottom: 2rem; }
   .card-res {
     width: 90%; } }
 
@@ -836,8 +841,8 @@ main {
     width: 100%; } }
 
 @media (max-width: 425px) {
-  .large {
-    height: 95rem; }
+  .card-release {
+    margin-bottom: 2rem; }
   .card-release-cont {
     width: 100%; }
   .card-res {

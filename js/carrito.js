@@ -36,7 +36,8 @@ const mostrarResumen = (precios) => {
     <tr>
     <th>.</th>
     <td id="total">Total: $${totalProducts}</td>
-    </tr>`}
+    </tr>`
+}
 
 // en esta funcion tenemos ta la logica de la tabla de los productos a mostrar en el HTML
 const mostrarTabla = (carrito) => {
@@ -52,13 +53,14 @@ const mostrarTabla = (carrito) => {
     </tr>
     </thead>`;
 
-
     // mostramos el titulo del resumen de la tabla, luego se acumularan los precios abajo
     let acumuladorResumen = `<tr>
         <th class="text-center align-middle">#</th>
         <th class="text-center fs-6">RESUMEN DE COMPRA</th>
         </tr>`;
 
+    let botonCompra = document.getElementById("botonCompra")
+    botonCompra.innerHTML = `<button class="btn-cart btn-outline-dark buy align-self-end" id="comprar">Comprar</button>`
 
     // esta variable es solo para mostrar la numeracion de la tabla a mostrar
     let numeracion = 0
@@ -125,6 +127,35 @@ const mostrarTabla = (carrito) => {
             restaCant(e.id)
         })
     })
+
+    // seleccionamos el boton anterior y usamos la funcion de escuchá 'click'
+    const finalizarCompra = document.getElementById('comprar')
+    finalizarCompra.addEventListener('click', () => {
+        // utilizamos la biblioteca Sweet Alert, mostramos las siguientes propiedades
+        swal({
+            title: "estas seguro con tus productos?",
+            text: "una vez que toques el boton ok, finalizara tu compra!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+            .then((sicompra) => {
+                if (sicompra) {              //si compra es Verdadero
+                    removeStock(),              //ejecutamos las siguientes funciones
+                        clear(),
+                        totalProducts,
+                        mostrarCards(storageCart),
+                        actualizarCant(),
+                        localStorage.setItem('carrito', JSON.stringify(storageCart))           
+                        swal(`Poof! tu Compra ah sido finalizada \n Puedes Vovler a comprar cuando quieras ;)`, {
+                            icon: "success",
+                        });
+                } else {
+                    swal("puedes editar tu compra");       //en caso que sea falso
+                    mostrarTabla(storageCart)
+                }
+            });
+    })
 }
 
 // ejecutamos funcion para mostrar la tabla de productos con el resumen
@@ -145,41 +176,71 @@ const sumarCant = (id) => {
 
         // ejecutamos la funcion para mostrar la cantidad en el HTML
         actualizarCant()
+
+        // vamos guardando los nuevos resultados de la interaccion del usuario al carrito
+        localStorage.setItem('carrito', JSON.stringify(storageCart))
+
+        // vamos actualizando el HTML
+        mostrarTabla(storageCart)
     }
-
-    // vamos guardando los nuevos resultados de la interaccion del usuario al carrito
-    localStorage.setItem('carrito', JSON.stringify(storageCart))
-
-    // vamos actualizando el HTML
-    mostrarTabla(storageCart)
 }
 
+// funcion para vaciar el carrito
+const clear = () => {
+
+    document.getElementById('tablaProductos').innerHTML = `
+    <div 
+    style=" display: flex; justify-content: space-evenly;">
+    No Hay productos en el carrito 
+    </div>`
+    document.getElementById('tablaTotal').innerHTML = ""
+    document.getElementById("botonCompra").innerHTML = "<div disbled></div>"
+    return storageCart = []
+}
+
+const removeItem = (id) => {
+
+    const sacoArray = storageCart.filter((product) => product.id !== id)
+
+    localStorage.setItem('carrito', JSON.stringify(sacoArray))
+
+    storageCart = JSON.parse(localStorage.getItem('carrito'))
+
+    clear()
+
+    return mostrarTabla(storageCart)
+}
 
 // funcion para restar la cantidad del producto
 const restaCant = (id) => {
 
-    // guardamos el producto en la variable para poder utilizar sus propiedades
     let resta = storageCart.find(e => e.id === id)
 
-    // validacion para que la cantidad del producto no sobrepase de 0
-    if (resta.cant > 0) {
+    resta.cant = resta.cant - 1
 
-        // el usuario va a poder restar siempre que este sea mayor a 0
-        resta.cant = resta.cant - 1
-         // ejecutamos la funcion para mostrar la cantidad en el HTML
-        actualizarCant()
-    }
+    actualizarCant()
 
-     // vamos guardando los nuevos resultados de la interaccion del usuario al carrito
-    localStorage.setItem('carrito', JSON.stringify(storageCart))
+    mostrarTabla(storageCart)
 
-    // vamos actualizando el HTML
+    resta.cant == 0 ? removeItem(resta.id) : localStorage.setItem('carrito', JSON.stringify(storageCart))
+
     mostrarTabla(storageCart)
 }
 
+// funcion para actualizar el stock de los productos despues de la compra
+const removeStock = () => {
 
+    // forEach para utilizar las propiedades de los productos del carrito
+    storageCart.forEach((product) => {
 
+        // variable que trae el nuevo stock del producto, 
+        // si no hay nuevo stock vamos a utiliar el stock del producto
+        let stockProducto = localStorage.getItem(`storageEnStock${product.id}`) || product.stock
 
+        // hacemos la resta del stock menos la cantidad pedida y la guardamos
+        stockProducto = stockProducto - product.cant
 
-
-
+        // guardamos esta nueva cantidad en el localStorage
+        localStorage.setItem(`storageEnStock${product.id}`, JSON.stringify(stockProducto))
+    });
+}
